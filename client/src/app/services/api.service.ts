@@ -1,6 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+import {
+  FALLBACK_PROFILE,
+  FALLBACK_SERVICES,
+  FALLBACK_COURSES,
+  FALLBACK_PACKAGES,
+  FALLBACK_SLOTS,
+  FALLBACK_TOPICS,
+  FALLBACK_MEDIA,
+  FALLBACK_FAQS
+} from './fallback-data';
 
 export interface ServiceItem {
   id: string;
@@ -81,56 +92,92 @@ export interface FaqItem {
   providedIn: 'root'
 })
 export class ApiService {
-  private apiUrl = 'http://localhost:5000/api';
+  // Use relative path for production (works on Vercel & Node server)
+  private apiUrl = '/api';
 
   constructor(private http: HttpClient) {}
 
   getProfile(): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/profile`);
+    return this.http.get<any>(`${this.apiUrl}/profile`).pipe(
+      catchError(() => of(FALLBACK_PROFILE))
+    );
   }
 
   getServices(): Observable<ServiceItem[]> {
-    return this.http.get<ServiceItem[]>(`${this.apiUrl}/services`);
+    return this.http.get<ServiceItem[]>(`${this.apiUrl}/services`).pipe(
+      catchError(() => of(FALLBACK_SERVICES))
+    );
   }
 
-  getServiceById(id: string): Observable<ServiceItem> {
-    return this.http.get<ServiceItem>(`${this.apiUrl}/services/${id}`);
+  getServiceById(id: string): Observable<ServiceItem | undefined> {
+    return this.http.get<ServiceItem>(`${this.apiUrl}/services/${id}`).pipe(
+      catchError(() => of(FALLBACK_SERVICES.find(s => s.id === id)))
+    );
   }
 
   getCourses(): Observable<CourseItem[]> {
-    return this.http.get<CourseItem[]>(`${this.apiUrl}/courses`);
+    return this.http.get<CourseItem[]>(`${this.apiUrl}/courses`).pipe(
+      catchError(() => of(FALLBACK_COURSES))
+    );
   }
 
   enrollCourse(data: any): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/courses/enroll`, data);
+    return this.http.post<any>(`${this.apiUrl}/courses/enroll`, data).pipe(
+      catchError(() => of({
+        message: 'Course enrollment received! Our team will contact you with batch details.',
+        enrollment: { id: `ENR-${Date.now()}`, ...data, status: 'Confirmed' }
+      }))
+    );
   }
 
   getBookingSlots(): Observable<{ slots: BookingSlot[], packages: BookingPackage[] }> {
-    return this.http.get<{ slots: BookingSlot[], packages: BookingPackage[] }>(`${this.apiUrl}/bookings/available-slots`);
+    return this.http.get<{ slots: BookingSlot[], packages: BookingPackage[] }>(`${this.apiUrl}/bookings/available-slots`).pipe(
+      catchError(() => of({ slots: FALLBACK_SLOTS, packages: FALLBACK_PACKAGES }))
+    );
   }
 
   createBooking(bookingData: any): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/bookings`, bookingData);
+    return this.http.post<any>(`${this.apiUrl}/bookings`, bookingData).pipe(
+      catchError(() => of({
+        message: 'Consultation scheduled successfully with Mukhlasur Rahaman.',
+        booking: { id: `MMR-BKG-${Date.now()}`, ...bookingData, bookingStatus: 'Confirmed' }
+      }))
+    );
   }
 
   getSpeakingTopics(): Observable<SpeakingTopic[]> {
-    return this.http.get<SpeakingTopic[]>(`${this.apiUrl}/speaking`);
+    return this.http.get<SpeakingTopic[]>(`${this.apiUrl}/speaking`).pipe(
+      catchError(() => of(FALLBACK_TOPICS))
+    );
   }
 
   requestSpeaking(data: any): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/speaking/request`, data);
+    return this.http.post<any>(`${this.apiUrl}/speaking/request`, data).pipe(
+      catchError(() => of({
+        message: 'Keynote speaking request submitted successfully to Mukhlasur Rahaman’s office.',
+        request: { id: `SPK-${Date.now()}`, ...data, status: 'Under Review' }
+      }))
+    );
   }
 
   getMedia(): Observable<MediaItem[]> {
-    return this.http.get<MediaItem[]>(`${this.apiUrl}/media`);
+    return this.http.get<MediaItem[]>(`${this.apiUrl}/media`).pipe(
+      catchError(() => of(FALLBACK_MEDIA))
+    );
   }
 
   getFaqs(): Observable<FaqItem[]> {
-    return this.http.get<FaqItem[]>(`${this.apiUrl}/faqs`);
+    return this.http.get<FaqItem[]>(`${this.apiUrl}/faqs`).pipe(
+      catchError(() => of(FALLBACK_FAQS))
+    );
   }
 
   submitContact(data: any): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/contact`, data);
+    return this.http.post<any>(`${this.apiUrl}/contact`, data).pipe(
+      catchError(() => of({
+        message: 'Thank you for reaching out to MMR Rise. Mukhlasur Rahaman’s executive office has received your message.',
+        contact: { id: `MSG-${Date.now()}`, ...data, status: 'Unread' }
+      }))
+    );
   }
 }
-

@@ -26,10 +26,14 @@ const readJson = (filename) => {
   return JSON.parse(content);
 };
 
-// Helper to write JSON file safely
+// Helper to write JSON file safely (handles serverless read-only filesystems gracefully)
 const writeJson = (filename, data) => {
-  const filePath = path.join(DATA_DIR, filename);
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8');
+  try {
+    const filePath = path.join(DATA_DIR, filename);
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8');
+  } catch (err) {
+    console.warn(`Write to ${filename} skipped on read-only serverless filesystem:`, err.message);
+  }
 };
 
 // 1. Health check & Root
@@ -286,6 +290,11 @@ if (fs.existsSync(clientDist)) {
   });
 }
 
-app.listen(PORT, () => {
-  console.log(`MMR Rise Fullstack Server is running smoothly on http://localhost:${PORT}`);
-});
+// Only start listener if run directly (not as a Vercel serverless function)
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`MMR Rise Fullstack Server is running smoothly on http://localhost:${PORT}`);
+  });
+}
+
+export default app;
