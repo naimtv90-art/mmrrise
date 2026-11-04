@@ -127,16 +127,16 @@ import { ApiService, ServiceItem, CourseItem, MediaItem } from '../../services/a
     </section>
 
     <!-- CORE CONSULTING SERVICES OVERVIEW -->
-    <section class="py-20 bg-slate-50">
+    <section class="py-20 bg-slate-50 dark:bg-brand-dark transition-colors duration-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span class="text-xs font-bold uppercase tracking-widest text-brand-blue bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-blue bg-blue-50 dark:bg-brand-blue/10 px-3 py-1 rounded-full border border-blue-200 dark:border-brand-blue/30">
             End-To-End Advisory &bull; MMR Rise
           </span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             MMR Rise Consulting & Coaching Services
           </h2>
-          <p class="text-slate-600 text-base leading-relaxed">
+          <p class="text-slate-600 dark:text-slate-300 text-base leading-relaxed">
             From organizational restructuring and high-stakes PMO setup to confidential 1-on-1 executive mentoring, discover structured frameworks crafted for measurable impact by MMR Rise.
           </p>
         </div>
@@ -144,39 +144,39 @@ import { ApiService, ServiceItem, CourseItem, MediaItem } from '../../services/a
         <!-- 5 Services Cards -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div *ngFor="let s of services"
-               class="bg-white rounded-2xl p-7 border border-slate-200 shadow-executive hover:shadow-xl hover:border-brand-accent transition duration-300 flex flex-col justify-between group">
+               class="bg-white dark:bg-slate-900/90 rounded-2xl p-7 border border-slate-200 dark:border-slate-800 shadow-executive hover:shadow-xl hover:border-brand-accent dark:hover:border-brand-accent transition duration-300 flex flex-col justify-between group">
             <div>
               <div class="flex items-center justify-between mb-4">
-                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-slate-100 text-slate-700 group-hover:bg-amber-50 group-hover:text-amber-800 transition">
+                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 group-hover:bg-amber-50 group-hover:text-amber-800 transition">
                   {{ s.badge }}
                 </span>
                 <span class="text-xs text-slate-400 font-medium">{{ s.duration }}</span>
               </div>
 
-              <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-blue transition mb-2">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-brand-blue transition mb-2">
                 {{ s.title }}
               </h3>
               <p class="text-xs text-brand-blue font-medium mb-3">
                 {{ s.subtitle }}
               </p>
-              <p class="text-sm text-slate-600 leading-relaxed line-clamp-3 mb-6">
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-3 mb-6">
                 {{ s.description }}
               </p>
 
               <!-- Deliverable bullets preview -->
-              <div class="space-y-2 border-t border-slate-100 pt-4 mb-6">
-                <div *ngFor="let d of s.deliverables.slice(0, 3)" class="flex items-start gap-2 text-xs text-slate-600">
+              <div class="space-y-2 border-t border-slate-100 dark:border-slate-800 pt-4 mb-6">
+                <div *ngFor="let d of s.deliverables.slice(0, 3)" class="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-300">
                   <span class="text-brand-accent font-bold mt-0.5">&#10003;</span>
                   <span>{{ d }}</span>
                 </div>
               </div>
             </div>
 
-            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-              <a [routerLink]="['/services']" [fragment]="s.id" class="text-xs font-bold text-slate-900 hover:text-brand-blue flex items-center gap-1">
+            <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <a [routerLink]="['/services']" [fragment]="s.id" class="text-xs font-bold text-slate-900 dark:text-slate-200 hover:text-brand-blue flex items-center gap-1">
                 View Full Delivery Scope &rarr;
               </a>
-              <a routerLink="/booking" class="text-xs px-3 py-1.5 rounded-lg bg-brand-dark text-white hover:bg-brand-blue transition font-medium">
+              <a routerLink="/booking" class="text-xs px-3 py-1.5 rounded-lg bg-brand-dark dark:bg-slate-800 text-white hover:bg-brand-blue transition font-medium">
                 Book
               </a>
             </div>
@@ -184,7 +184,7 @@ import { ApiService, ServiceItem, CourseItem, MediaItem } from '../../services/a
         </div>
 
         <div class="mt-12 text-center">
-          <a routerLink="/services" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-brand-dark text-white hover:bg-slate-800 font-semibold text-sm transition">
+          <a routerLink="/services" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-brand-dark dark:bg-slate-800 text-white hover:bg-slate-800 dark:hover:bg-slate-700 font-semibold text-sm transition">
             Browse All Consulting Delivery Information & Frameworks &rarr;
           </a>
         </div>
@@ -257,7 +257,7 @@ import { ApiService, ServiceItem, CourseItem, MediaItem } from '../../services/a
     </section>
 
     <!-- KEYNOTE & SPEAKING SPOTLIGHT -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-white dark:bg-brand-dark transition-colors duration-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-gradient-to-r from-brand-navy via-slate-900 to-brand-navy rounded-3xl p-8 sm:p-14 text-white shadow-2xl relative overflow-hidden">
           <div class="max-w-2xl relative z-10 space-y-4">
@@ -284,16 +284,16 @@ import { ApiService, ServiceItem, CourseItem, MediaItem } from '../../services/a
     </section>
 
     <!-- PAID BOOKING CALL TO ACTION -->
-    <section class="py-16 bg-slate-100 border-t border-slate-200">
+    <section class="py-16 bg-slate-100 dark:bg-brand-navy border-t border-slate-200 dark:border-slate-800 transition-colors duration-200">
       <div class="max-w-4xl mx-auto px-4 text-center space-y-5">
-        <h2 class="text-3xl font-extrabold text-slate-900">
+        <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white">
           Ready to Elevate Your Leadership or Transform Your PMO?
         </h2>
-        <p class="text-slate-600 text-base leading-relaxed">
+        <p class="text-slate-600 dark:text-slate-300 text-base leading-relaxed">
           Schedule a direct 1-on-1 Strategy Discovery Call or an Executive Leadership Deep-Dive with Mukhlasur Rahaman today. Select your preferred date and time on our online booking calendar.
         </p>
         <div class="pt-2">
-          <a routerLink="/booking" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-brand-dark text-brand-accent font-bold text-sm uppercase tracking-wider shadow-lg hover:bg-slate-900 hover:scale-105 transition duration-200">
+          <a routerLink="/booking" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-brand-accent to-brand-accentLight text-brand-dark font-bold text-sm uppercase tracking-wider shadow-gold-glow hover:brightness-110 hover:scale-105 transition duration-200">
             <span>📅 Go To Paid Booking Calendar</span>
           </a>
         </div>

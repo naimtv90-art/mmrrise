@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="utf-8">
   <title>MMR Rise | Mukhlasur Rahaman - Executive Coach & Management Consultant</title>
@@ -7,8 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="MMR Rise - Official platform of Mukhlasur Rahaman. Executive Coaching, Organizational Transformation, Project Management Consultancy & High-Impact Corporate Training.">
   <link rel="icon" type="image/png" href="logo.png">
+  <script>
+    (function() {
+      try {
+        const theme = localStorage.getItem('mmr-theme');
+        if (theme === 'light') {
+          document.documentElement.classList.remove('dark');
+        } else {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
-<body class="bg-brand-surface text-slate-800 antialiased selection:bg-brand-accent selection:text-brand-dark">
+<body class="bg-brand-surface dark:bg-brand-dark text-slate-800 dark:text-slate-100 antialiased selection:bg-brand-accent selection:text-brand-dark transition-colors duration-200">
   <app-root></app-root>
 </body>
 </html>

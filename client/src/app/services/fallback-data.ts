@@ -359,3 +359,4 @@ export const FALLBACK_FAQS: FaqItem[] = [
     answer: "You can request a speaker booking directly via our 'Speaking' page or through our Paid Booking calendar. Our engagement team will evaluate your event date, theme, and audience profile within 24 hours to finalize terms."
   }
 ];
+
