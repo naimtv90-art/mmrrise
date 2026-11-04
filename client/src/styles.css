@@ -9,9 +9,9 @@
     scroll-behavior: smooth;
     font-family: 'Inter', sans-serif;
   }
-  html.light {
+  html.light, html:not(.dark) {
     color: #0A1931;
-    background-color: #F4F7FB;
+    background-color: #FFFFFF;
   }
   html.dark {
     color: #F8FAFC;

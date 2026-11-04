@@ -7,22 +7,22 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterLink],
   template: `
-    <footer class="bg-brand-dark text-slate-400 border-t border-slate-800/80 pt-16 pb-12">
+    <footer class="bg-white dark:bg-brand-dark text-slate-600 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800/80 pt-16 pb-12 transition-colors duration-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-200 dark:border-slate-800">
           
           <!-- Column 1: Brand Info -->
           <div class="lg:col-span-2 space-y-4">
             <div class="flex items-center space-x-3">
-              <div class="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-sm p-1.5 border border-white/20 flex items-center justify-center shadow-lg">
+              <div class="w-12 h-12 rounded-xl bg-slate-100 dark:bg-white/10 backdrop-blur-sm p-1.5 border border-slate-200 dark:border-white/20 flex items-center justify-center shadow">
                 <img src="logo.png" alt="MMR Rise Logo" class="w-full h-full object-contain">
               </div>
-              <span class="font-cinzel text-2xl font-bold tracking-wider text-white">
+              <span class="font-cinzel text-2xl font-bold tracking-wider text-slate-900 dark:text-white">
                 MMR <span class="text-brand-accent font-sans font-light">RISE</span>
               </span>
             </div>
-            <p class="text-sm leading-relaxed text-slate-300 max-w-sm">
-              <strong class="text-white">MMR Rise</strong> is the premier leadership advisory and management consultancy led by <strong class="text-white">Mukhlasur Rahaman</strong>. Transforming organizations, empowering C-suite leaders, and instituting world-class project execution.
+            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-300 max-w-sm">
+              <strong class="text-slate-900 dark:text-white">MMR Rise</strong> is the premier leadership advisory and management consultancy led by <strong class="text-slate-900 dark:text-white">Mukhlasur Rahaman</strong>. Transforming organizations, empowering C-suite leaders, and instituting world-class project execution.
             </p>
             <div class="flex items-center space-x-4 pt-2">
               <div class="text-xs text-brand-accent uppercase tracking-wider font-semibold">Connect with MMR Rise:</div>
@@ -37,37 +37,37 @@ import { RouterLink } from '@angular/router';
 
           <!-- Column 2: Consulting & Services -->
           <div>
-            <h4 class="text-xs uppercase tracking-widest font-bold text-white mb-4">Consulting Services</h4>
+            <h4 class="text-xs uppercase tracking-widest font-bold text-slate-900 dark:text-white mb-4">Consulting Services</h4>
             <ul class="space-y-2.5 text-sm">
-              <li><a routerLink="/services" fragment="consulting" class="hover:text-brand-accent transition">Strategic Consulting</a></li>
-              <li><a routerLink="/services" fragment="organizational-transformation" class="hover:text-brand-accent transition">Organizational Transformation</a></li>
-              <li><a routerLink="/services" fragment="project-management-consultancy" class="hover:text-brand-accent transition">Project Management (PMO)</a></li>
-              <li><a routerLink="/services" fragment="organizational-coaching" class="hover:text-brand-accent transition">Organizational Coaching</a></li>
-              <li><a routerLink="/services" fragment="executive-coaching" class="hover:text-brand-accent transition">Executive 1-on-1 Coaching</a></li>
+              <li><a routerLink="/services" fragment="consulting" class="hover:text-brand-blue dark:hover:text-brand-accent transition">Strategic Consulting</a></li>
+              <li><a routerLink="/services" fragment="organizational-transformation" class="hover:text-brand-blue dark:hover:text-brand-accent transition">Organizational Transformation</a></li>
+              <li><a routerLink="/services" fragment="project-management-consultancy" class="hover:text-brand-blue dark:hover:text-brand-accent transition">Project Management (PMO)</a></li>
+              <li><a routerLink="/services" fragment="organizational-coaching" class="hover:text-brand-blue dark:hover:text-brand-accent transition">Organizational Coaching</a></li>
+              <li><a routerLink="/services" fragment="executive-coaching" class="hover:text-brand-blue dark:hover:text-brand-accent transition">Executive 1-on-1 Coaching</a></li>
             </ul>
           </div>
 
           <!-- Column 3: Learning & Speaking -->
           <div>
-            <h4 class="text-xs uppercase tracking-widest font-bold text-white mb-4">Courses & Speaking</h4>
+            <h4 class="text-xs uppercase tracking-widest font-bold text-slate-900 dark:text-white mb-4">Courses & Speaking</h4>
             <ul class="space-y-2.5 text-sm">
-              <li><a routerLink="/courses" class="hover:text-brand-accent transition">Online Learning Platform</a></li>
-              <li><a routerLink="/courses" class="hover:text-brand-accent transition">Offline Executive Workshops</a></li>
-              <li><a routerLink="/speaking" class="hover:text-brand-accent transition">Keynote Speeches</a></li>
-              <li><a routerLink="/speaking" class="hover:text-brand-accent transition">Corporate Offsites</a></li>
-              <li><a routerLink="/media" class="hover:text-brand-accent transition">Press & Podcasts</a></li>
+              <li><a routerLink="/courses" class="hover:text-brand-blue dark:hover:text-brand-accent transition">Online Learning Platform</a></li>
+              <li><a routerLink="/courses" class="hover:text-brand-blue dark:hover:text-brand-accent transition">Offline Executive Workshops</a></li>
+              <li><a routerLink="/speaking" class="hover:text-brand-blue dark:hover:text-brand-accent transition">Keynote Speeches</a></li>
+              <li><a routerLink="/speaking" class="hover:text-brand-blue dark:hover:text-brand-accent transition">Corporate Offsites</a></li>
+              <li><a routerLink="/media" class="hover:text-brand-blue dark:hover:text-brand-accent transition">Press & Podcasts</a></li>
             </ul>
           </div>
 
           <!-- Column 4: Quick Engagements -->
           <div>
-            <h4 class="text-xs uppercase tracking-widest font-bold text-white mb-4">Company: MMR Rise</h4>
+            <h4 class="text-xs uppercase tracking-widest font-bold text-slate-900 dark:text-white mb-4">Company: MMR Rise</h4>
             <ul class="space-y-2.5 text-sm">
               <li><a routerLink="/about-rise" class="text-brand-accent font-semibold hover:underline">About MMR Rise</a></li>
-              <li><a routerLink="/about-mmr" class="hover:text-brand-accent transition">About Mukhlasur Rahaman</a></li>
-              <li><a routerLink="/booking" class="hover:text-brand-accent transition">Book Paid Consultation</a></li>
-              <li><a routerLink="/contact" class="hover:text-brand-accent transition">Inquiry & Office Info</a></li>
-              <li><a routerLink="/contact" fragment="faq" class="hover:text-brand-accent transition">Frequently Asked Questions</a></li>
+              <li><a routerLink="/about-mmr" class="hover:text-brand-blue dark:hover:text-brand-accent transition">About Mukhlasur Rahaman</a></li>
+              <li><a routerLink="/booking" class="hover:text-brand-blue dark:hover:text-brand-accent transition">Book Paid Consultation</a></li>
+              <li><a routerLink="/contact" class="hover:text-brand-blue dark:hover:text-brand-accent transition">Inquiry & Office Info</a></li>
+              <li><a routerLink="/contact" fragment="faq" class="hover:text-brand-blue dark:hover:text-brand-accent transition">Frequently Asked Questions</a></li>
             </ul>
           </div>
 
@@ -76,12 +76,12 @@ import { RouterLink } from '@angular/router';
         <!-- Bottom bar -->
         <div class="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500">
           <div>
-            &copy; 2026 <strong class="text-slate-400">MMR Rise</strong> &bull; Founded by Mukhlasur Rahaman. All rights reserved.
+            &copy; 2026 <strong class="text-slate-700 dark:text-slate-400">MMR Rise</strong> &bull; Founded by Mukhlasur Rahaman. All rights reserved.
           </div>
           <div class="mt-4 md:mt-0 flex space-x-6">
-            <span class="text-slate-400">Gulshan-2, Dhaka, Bangladesh</span>
+            <span class="text-slate-600 dark:text-slate-400">Gulshan-2, Dhaka, Bangladesh</span>
             <span>&bull;</span>
-            <span class="text-slate-400">contact&#64;mmrrise.com</span>
+            <span class="text-slate-600 dark:text-slate-400">contact&#64;mmrrise.com</span>
           </div>
         </div>
 
