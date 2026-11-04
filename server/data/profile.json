@@ -1,0 +1,30 @@
+{
+  "name": "Mukhlasur Rahaman",
+  "brand": "MMR Rise",
+  "title": "Executive Coach, Corporate Trainer & Management Consultant",
+  "tagline": "Empowering Leaders. Transforming Cultures. Accelerating Execution.",
+  "experienceYears": 18,
+  "stats": {
+    "leadersCoached": "500+",
+    "organizationsTransformed": "65+",
+    "trainingHours": "12,000+",
+    "clientSatisfactionRate": "99.4%"
+  },
+  "bioShort": "Mukhlasur Rahaman is a seasoned executive coach, enterprise consultant, and corporate trainer dedicated to guiding founders, CXOs, and ambitious organizations toward sustainable leadership mastery and operational excellence.",
+  "bioFull": "With over 18 years of cross-industry leadership and consulting experience, Mukhlasur Rahaman (MMR) has been at the forefront of organizational transformation, strategic governance, and leadership acceleration. Through his advisory firm MMR Rise, he bridges the gap between vision and execution. Whether mentoring C-suite executives in high-stakes negotiations, restructuring complex PMOs, or coaching high-performance teams, Mukhlasur brings deep strategic clarity, empathy, and uncompromising accountability to every room he enters.",
+  "credentials": [
+    "Certified Executive Leadership Coach",
+    "Certified Enterprise Agile & Scrum Consultant",
+    "Project Management Professional (PMP) Accredited Advisor",
+    "Senior Organizational Development & Transformation Specialist",
+    "Keynote Speaker at 100+ National & Regional Industry Summits"
+  ],
+  "contact": {
+    "email": "contact@mmrrise.com",
+    "phone": "+880 1711 000000",
+    "location": "Gulshan-2, Dhaka, Bangladesh",
+    "linkedin": "https://linkedin.com/in/mukhlasur-rahaman",
+    "hours": "Sunday - Thursday: 9:00 AM - 6:00 PM (BST)"
+  }
+}
+

@@ -1,0 +1,99 @@
+[
+  {
+    "id": "pm-mastery-bootcamp",
+    "title": "Mastering Agile & Enterprise Project Management",
+    "category": "Project Management",
+    "deliveryMode": "Hybrid (Online + In-Person Workshops)",
+    "level": "Intermediate to Advanced",
+    "duration": "8 Weeks (32 Hours)",
+    "price": 25000,
+    "currency": "BDT",
+    "originalPrice": 35000,
+    "rating": 4.9,
+    "reviewCount": 142,
+    "instructor": "Mukhlasur Rahaman",
+    "shortDescription": "Master end-to-end modern project delivery, Agile/Scrum lifecycles, PMO methodologies, and real-world project crisis recovery.",
+    "features": [
+      "Live Interactive Weekend Masterclasses",
+      "Real-world Case Studies & Capstone Project",
+      "PMO Ready Templates & Frameworks",
+      "Direct Mentorship & 1-on-1 Review",
+      "Accredited MMR Rise Certificate"
+    ],
+    "upcomingBatch": "Starting 15th December 2026",
+    "platform": "Both Online & Offline (Dhaka Hub)"
+  },
+  {
+    "id": "executive-leadership-accelerator",
+    "title": "Executive Leadership & Strategic Influence",
+    "category": "Leadership",
+    "deliveryMode": "Online Executive Cohort",
+    "level": "Senior Leaders & C-Suite",
+    "duration": "6 Weeks (Live Virtual Labs)",
+    "price": 40000,
+    "currency": "BDT",
+    "originalPrice": 55000,
+    "rating": 5.0,
+    "reviewCount": 88,
+    "instructor": "Mukhlasur Rahaman",
+    "shortDescription": "An intensive closed-door leadership lab for senior executives looking to master board-level influence, strategic agility, and visionary leadership.",
+    "features": [
+      "Closed-Door Cohort of Max 15 Executives",
+      "Strategic Boardroom Simulation",
+      "Executive Presence & Communication Coaching",
+      "Lifetime Access to Alumni Leadership Circle",
+      "One 1-on-1 Private Coaching Session Included"
+    ],
+    "upcomingBatch": "Starting 5th January 2027",
+    "platform": "Online Virtual Executive Lab"
+  },
+  {
+    "id": "corporate-trainer-cert",
+    "title": "Train The Trainer (TTT) - High-Impact Facilitation Mastery",
+    "category": "Training & Coaching",
+    "deliveryMode": "Offline Hands-on Immersion",
+    "level": "All Levels",
+    "duration": "3-Day Intensive Bootcamp",
+    "price": 30000,
+    "currency": "BDT",
+    "originalPrice": 42000,
+    "rating": 4.8,
+    "reviewCount": 96,
+    "instructor": "Mukhlasur Rahaman",
+    "shortDescription": "Become a world-class corporate trainer, captivating facilitator, and influential public speaker with stage mastery techniques.",
+    "features": [
+      "Live Micro-Training Practice with Video Feedback",
+      "Instructional Design & Adult Learning Psychology",
+      "Audience Engagement & High-Energy Dynamics",
+      "Trainer Toolkits, Slides & Activity Blueprints",
+      "Corporate Certification & Empanelment Opportunities"
+    ],
+    "upcomingBatch": "Starting 22nd December 2026",
+    "platform": "Offline In-Person (Executive Convention Center, Dhaka)"
+  },
+  {
+    "id": "organizational-culture-mastery",
+    "title": "Designing High-Trust & High-Performance Culture",
+    "category": "Organizational Transformation",
+    "deliveryMode": "Self-Paced Online + Weekly Q&A",
+    "level": "HR Leaders & Team Managers",
+    "duration": "4 Weeks Self-Paced",
+    "price": 15000,
+    "currency": "BDT",
+    "originalPrice": 22000,
+    "rating": 4.9,
+    "reviewCount": 64,
+    "instructor": "Mukhlasur Rahaman",
+    "shortDescription": "Practical toolkits for HR directors, team leaders, and CXOs to eliminate workplace toxicity, align values, and amplify team productivity.",
+    "features": [
+      "On-Demand HD Video Modules",
+      "Weekly Live Ask-Me-Anything with MMR",
+      "Culture Assessment Surveys & Templates",
+      "Employee Retention Playbook",
+      "Verified Certificate of Completion"
+    ],
+    "upcomingBatch": "Immediate Lifetime Access",
+    "platform": "Online Learning Portal"
+  }
+]
+

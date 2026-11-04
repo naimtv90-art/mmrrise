@@ -1,0 +1,88 @@
+[
+  {
+    "id": "consulting",
+    "title": "Strategic Consulting",
+    "subtitle": "High-Impact Enterprise & Business Strategy Advisory",
+    "badge": "Strategy & Growth",
+    "icon": "briefcase",
+    "description": "Comprehensive corporate advisory to diagnose operational bottlenecks, formulate resilient business strategies, and drive sustainable market expansion for growth-oriented enterprises.",
+    "deliverables": [
+      "Enterprise Capability & Readiness Assessment",
+      "Market Positioning & Competitive Landscape Strategy",
+      "Business Model Innovation & Revenue Optimization",
+      "Quarterly Strategic Milestone Review & Governance"
+    ],
+    "duration": "3 - 12 Months Engagement",
+    "targetAudience": "Enterprises, Mid-Market Companies, Fast-Growing Startups",
+    "deliverableFormat": "Hybrid (On-site diagnostic + Executive Boardrooms)"
+  },
+  {
+    "id": "organizational-transformation",
+    "title": "Organizational Transformation",
+    "subtitle": "Cultural, Structural & Agile Agility Transformation",
+    "badge": "Culture & Systems",
+    "icon": "refresh-cw",
+    "description": "Guiding enterprises through profound operational shifts, cultural realignment, and leadership readiness to stay resilient in rapidly evolving disruptive industries.",
+    "deliverables": [
+      "Culture Gap Audit & Organizational Health Index",
+      "Cross-Functional Team Restructuring & Change Management",
+      "Agile & High-Performance Operating System Integration",
+      "Change Champion Enablement & Leadership Alignment"
+    ],
+    "duration": "6 - 18 Months",
+    "targetAudience": "Corporations transitioning to modern management models",
+    "deliverableFormat": "Deep-Dive Workshops, Change Roadmaps & Shadowing"
+  },
+  {
+    "id": "project-management-consultancy",
+    "title": "Project Management Consultancy",
+    "subtitle": "Global Standards, PMO Setup & Delivery Governance",
+    "badge": "Execution & Delivery",
+    "icon": "check-square",
+    "description": "Transforming chaotic project delivery into predictable, on-time, within-budget success through proven PMO methodologies (PMP, Agile, Scrum, Lean PM).",
+    "deliverables": [
+      "Enterprise PMO (Project Management Office) Architecture & Setup",
+      "Project Risk, Governance & Quality Control Frameworks",
+      "Portfolio Prioritization & Resource Capacity Planning",
+      "Hands-on Rescue for At-Risk Mission-Critical Projects"
+    ],
+    "duration": "Project-based or Retainer Advisory",
+    "targetAudience": "PMOs, Engineering, IT, Infrastructure & Large Project Teams",
+    "deliverableFormat": "PMO Framework, Tooling Integration & Mentorship"
+  },
+  {
+    "id": "organizational-coaching",
+    "title": "Organizational Coaching",
+    "subtitle": "Team Synergy, Collective Intelligence & High-Trust Culture",
+    "badge": "Team Excellence",
+    "icon": "users",
+    "description": "Unlocking collective team performance, dismantling communication silos, and fostering an environment of psychological safety, ownership, and collaborative accountability.",
+    "deliverables": [
+      "Team Dynamics Diagnostic & Trust Benchmark",
+      "Systemic Team Coaching Sessions (Bi-weekly)",
+      "Conflict Resolution & Cross-Departmental Alignment",
+      "Goal Setting Framework (OKRs & KPI Cascades)"
+    ],
+    "duration": "3 - 6 Months",
+    "targetAudience": "Department Heads, Cross-Functional Units, Scale-up Teams",
+    "deliverableFormat": "Interactive Facilitation & Systemic Team Labs"
+  },
+  {
+    "id": "executive-coaching",
+    "title": "Executive Coaching",
+    "subtitle": "Confidential 1-on-1 Leadership Mentorship for C-Suite & Founders",
+    "badge": "Leadership Mastery",
+    "icon": "award",
+    "description": "Private, high-caliber coaching designed for CEOs, Managing Directors, Board Members, and Senior Executives to sharpen strategic presence, executive decision-making, and emotional intelligence.",
+    "deliverables": [
+      "360-Degree Executive Leadership Assessment",
+      "Personalized 6-Month Executive Development Plan",
+      "Confidential Bi-Weekly Strategic Sounding Board Sessions",
+      "Crisis Leadership & High-Stakes Negotiation Advisory"
+    ],
+    "duration": "6 - 12 Months (1-on-1 Retainer)",
+    "targetAudience": "CEOs, Founders, Directors, High-Potential VP Executives",
+    "deliverableFormat": "1-on-1 Confidential Sessions (In-Person / Virtual)"
+  }
+]
+

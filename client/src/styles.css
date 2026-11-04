@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+    color: #0A1931;
+    background-color: #F4F7FB;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+/* Solar Amber/Orange Gradient from Official Logo (#F4951D) */
+.gold-gradient-text, .brand-gradient-text, .accent-gradient-text {
+  background: linear-gradient(135deg, #F4951D 0%, #FFBE6B 50%, #D87A0B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Corporate Azure Blue Gradient from Official Logo (#1F74B9) */
+.brand-blue-gradient-text {
+  background: linear-gradient(135deg, #1F74B9 0%, #4FA4E4 50%, #135489 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Harmonized Dual Brand Gradient (Azure Blue -> Solar Amber) */
+.brand-dual-gradient-text {
+  background: linear-gradient(135deg, #1F74B9 0%, #3E92D8 35%, #FBB04D 70%, #F4951D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-gradient, .brand-border-gradient {
+  border-image: linear-gradient(135deg, #1F74B9, #FBB04D, #F4951D) 1;
+}
+
+/* Custom scrollbar matched with logo theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #060E1C;
+}
+::-webkit-scrollbar-thumb {
+  background: #12284D;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F4951D;
+}

@@ -1,0 +1,43 @@
+[
+  {
+    "id": "media-1",
+    "type": "Video",
+    "title": "Mastering Strategic Decision Making Under Pressure",
+    "source": "Leadership Summit Keynote",
+    "duration": "18 mins",
+    "tag": "Keynote Speech",
+    "date": "October 2026",
+    "description": "Watch Mukhlasur Rahaman address 500+ corporate leaders on executive poise and navigating high-stakes business choices."
+  },
+  {
+    "id": "media-2",
+    "type": "Podcast",
+    "title": "Why 70% of Digital Transformations Fail and How to Fix Them",
+    "source": "The Executive Edge Podcast (Episode 44)",
+    "duration": "42 mins",
+    "tag": "Podcast Feature",
+    "date": "September 2026",
+    "description": "A deep dive conversation exploring organizational psychology, change resistance, and execution velocity."
+  },
+  {
+    "id": "media-3",
+    "type": "Article",
+    "title": "The 5 Non-Negotiable Habits of Future-Ready Executive Teams",
+    "source": "Business Outlook Review",
+    "duration": "6 min read",
+    "tag": "Thought Leadership",
+    "date": "August 2026",
+    "description": "Featured opinion editorial on how agile leadership frameworks are reshaping corporate governance in South Asia."
+  },
+  {
+    "id": "media-4",
+    "type": "Gallery",
+    "title": "Corporate Transformation Immersion Workshop - Dhaka Hub",
+    "source": "MMR Rise Executive Masterclass",
+    "duration": "Photo Series",
+    "tag": "Workshop Gallery",
+    "date": "July 2026",
+    "description": "Highlights from the intensive 3-day corporate leadership retreat attended by 30+ Managing Directors and C-Suite executives."
+  }
+]
+

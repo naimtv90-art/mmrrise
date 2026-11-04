@@ -1,0 +1,27 @@
+[
+  {
+    "id": "keynote-agile-future",
+    "title": "Leading in Uncharted Waters: Navigating Volatility with Strategic Agility",
+    "theme": "Leadership & Future of Work",
+    "audience": "Corporate Leaders, CXOs, Industry Summits",
+    "description": "How modern leaders can break rigid hierarchies, embrace rapid experimentation, and foster unwavering resilience amid economic headwinds.",
+    "duration": "45 - 60 Minutes + Q&A"
+  },
+  {
+    "id": "keynote-culture-transformation",
+    "title": "From Chaos to High Performance: Architecting Purpose-Driven Organizations",
+    "theme": "Organizational Culture",
+    "audience": "All-Hands Conferences, Annual Corporate Offsites",
+    "description": "Demystifying why transformation efforts fail and how authentic leadership transforms disengaged teams into accountable powerhouses.",
+    "duration": "60 Minutes Keynote"
+  },
+  {
+    "id": "keynote-project-governance",
+    "title": "The Execution Advantage: Delivering Complex Projects with Zero Excuses",
+    "theme": "Project & Delivery Governance",
+    "audience": "Project Managers, Tech Leads, Operations Leaders",
+    "description": "Tactical lessons learned from managing multi-million-dollar transformations, managing stakeholder conflict, and guaranteeing project velocity.",
+    "duration": "45 Minutes Keynote / 90 Minutes Masterclass"
+  }
+]
+

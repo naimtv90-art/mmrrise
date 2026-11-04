@@ -1,0 +1,39 @@
+[
+  {
+    "id": "BK-1793777907511",
+    "packageId": "custom",
+    "packageName": "Executive Strategy Deep-Dive",
+    "clientName": "Dr. Rafiqul Hasan",
+    "clientEmail": "rafiq@corp.com",
+    "clientPhone": "+8801711223344",
+    "organization": "Individual / Confidential",
+    "date": "2026-11-25",
+    "timeSlot": "11:00 AM - 12:30 PM",
+    "mode": "Virtual (Google Meet / Zoom)",
+    "fee": 15000,
+    "currency": "BDT",
+    "paymentMethod": "bKash / Card / Direct Bank Transfer",
+    "paymentStatus": "Verification Pending / Paid Demo",
+    "status": "Confirmed",
+    "notes": "",
+    "createdAt": "2026-11-04T07:38:27.511Z"
+  },
+  {
+    "id": "BK-2026-001",
+    "serviceType": "Executive Strategy Session",
+    "clientName": "Tariqul Islam",
+    "clientEmail": "tariqul@apexgroup.com",
+    "clientPhone": "+8801712345678",
+    "organization": "Apex Horizon Ltd",
+    "date": "2026-11-20",
+    "timeSlot": "10:00 AM - 11:30 AM",
+    "mode": "Virtual (Google Meet)",
+    "fee": 15000,
+    "currency": "BDT",
+    "status": "Confirmed",
+    "paymentStatus": "Paid",
+    "paymentMethod": "bKash Merchant",
+    "notes": "Discussing PMO restructuring for our 2027 fiscal roadmap.",
+    "createdAt": "2026-11-01T09:30:00Z"
+  }
+]

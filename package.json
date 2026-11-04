@@ -1,0 +1,23 @@
+{
+  "name": "mmr-rise-platform",
+  "version": "1.0.0",
+  "description": "Official Web Platform for Mukhlasur Rahaman (MMR Rise) - Executive Coach, Trainer & Management Consultant",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "node server/server.js",
+    "client": "cd client && npm start",
+    "build:client": "cd client && npm run build",
+    "build": "npm run build:client"
+  },
+  "keywords": [
+    "executive-coaching",
+    "corporate-training",
+    "management-consultancy",
+    "angular",
+    "nodejs",
+    "bangladesh"
+  ],
+  "author": "Mukhlasur Rahaman (MMR Rise)",
+  "license": "ISC"
+}
+
