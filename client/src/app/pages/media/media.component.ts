@@ -19,7 +19,7 @@ import { ApiService, MediaItem } from '../../services/api.service';
             Media & Thought Leadership
           </h1>
           <p class="text-lg text-slate-600 dark:text-slate-300 font-light leading-relaxed">
-            Keynote recordings, podcast conversations, publications, and photo highlights from executive retreats led by Mukhlasur Rahaman.
+            Keynote recordings, TEDx speeches, podcast conversations, publications, and highlights from executive retreats led by Mukhlesur Rahman.
           </p>
         </div>
       </div>
@@ -70,7 +70,7 @@ import { ApiService, MediaItem } from '../../services/api.service';
         <div class="mt-16 bg-slate-50 dark:bg-brand-navy rounded-3xl p-8 sm:p-12 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm dark:shadow-none">
           <div class="space-y-2 text-center sm:text-left">
             <h3 class="text-xl font-bold font-cinzel text-slate-900 dark:text-white">Journalist or Conference Organizer?</h3>
-            <p class="text-xs text-slate-600 dark:text-slate-300">Download Mukhlasur Rahaman’s high-resolution media kit, official headshots, and speaker bio.</p>
+            <p class="text-xs text-slate-600 dark:text-slate-300">Download Mukhlesur Rahman’s high-resolution media kit, official headshots, and speaker bio.</p>
           </div>
           <a routerLink="/contact" class="px-6 py-3 rounded-xl bg-brand-accent text-brand-dark font-bold text-xs uppercase tracking-wider hover:brightness-110 transition whitespace-nowrap shadow-md">
             Request Media Press Kit

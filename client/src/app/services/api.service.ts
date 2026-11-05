@@ -139,7 +139,7 @@ export class ApiService {
   createBooking(bookingData: any): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}/bookings`, bookingData).pipe(
       catchError(() => of({
-        message: 'Consultation scheduled successfully with Mukhlasur Rahaman.',
+        message: 'Consultation scheduled successfully with Mukhlesur Rahman.',
         booking: { id: `MMR-BKG-${Date.now()}`, ...bookingData, bookingStatus: 'Confirmed' }
       }))
     );
@@ -154,7 +154,7 @@ export class ApiService {
   requestSpeaking(data: any): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}/speaking/request`, data).pipe(
       catchError(() => of({
-        message: 'Keynote speaking request submitted successfully to Mukhlasur Rahaman’s office.',
+        message: 'Keynote speaking request submitted successfully to Mukhlesur Rahman’s office.',
         request: { id: `SPK-${Date.now()}`, ...data, status: 'Under Review' }
       }))
     );
@@ -175,7 +175,7 @@ export class ApiService {
   submitContact(data: any): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}/contact`, data).pipe(
       catchError(() => of({
-        message: 'Thank you for reaching out to MMR Rise. Mukhlasur Rahaman’s executive office has received your message.',
+        message: 'Thank you for reaching out to MMR Rise. Mukhlesur Rahman’s executive office has received your message.',
         contact: { id: `MSG-${Date.now()}`, ...data, status: 'Unread' }
       }))
     );

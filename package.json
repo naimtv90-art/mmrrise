@@ -1,7 +1,7 @@
 {
   "name": "mmr-rise-platform",
   "version": "1.0.0",
-  "description": "Official Web Platform for Mukhlasur Rahaman (MMR Rise) - Executive Coach, Trainer & Management Consultant",
+  "description": "Official Web Platform for Mukhlesur Rahman (MMR Rise) - Executive Coach, Trainer & Strategic Advisor",
   "type": "module",
   "scripts": {
     "start": "node server/server.js",

@@ -16,10 +16,13 @@ import { ApiService } from '../../services/api.service';
             About The Founder & Executive Coach
           </span>
           <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight font-cinzel text-slate-900 dark:text-white">
-            Mukhlasur Rahaman
+            Mukhlesur Rahman
           </h1>
-          <p class="text-lg text-slate-600 dark:text-slate-300 font-light leading-relaxed">
-            Executive Leadership Coach, Management Consultant & Enterprise Trainer with over 18 years of high-stakes corporate execution experience.
+          <p class="text-lg text-brand-accent font-medium">
+            PMP, PgMP, PfMP, PCC, DTM &bull; Executive Coach | Trainer | Strategic Advisor
+          </p>
+          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-light leading-relaxed">
+            &ldquo;Organizations grow best when people grow with them.&rdquo; Partnering with CXOs, rising managers, and HR leaders with over two decades of corporate leadership across telecom, technology, and strategic management.
           </p>
         </div>
       </div>
@@ -34,40 +37,44 @@ import { ApiService } from '../../services/api.service';
           <div class="lg:col-span-5 space-y-6">
             <div class="bg-white dark:bg-brand-navy text-slate-900 dark:text-white rounded-3xl p-8 border border-slate-200 dark:border-slate-800 shadow-xl relative overflow-hidden">
               <div class="w-44 h-44 rounded-2xl overflow-hidden mx-auto mb-6 shadow-xl border-2 border-brand-accent/70 bg-slate-100 dark:bg-slate-900 ring-4 ring-brand-accent/20">
-                <img src="mukhlasur-rahaman.jpg" alt="Mukhlasur Rahaman" class="w-full h-full object-cover object-top">
+                <img src="mukhlasur-rahaman.jpg" alt="Mukhlesur Rahman" class="w-full h-full object-cover object-top">
               </div>
-              <h3 class="text-2xl font-bold text-center font-cinzel text-slate-900 dark:text-white">Mukhlasur Rahaman</h3>
-              <p class="text-xs text-brand-accent text-center font-semibold uppercase tracking-wider mt-1">Founder & Managing Consultant, MMR Rise</p>
+              <h3 class="text-2xl font-bold text-center font-cinzel text-slate-900 dark:text-white">Mukhlesur Rahman</h3>
+              <p class="text-xs text-brand-accent text-center font-semibold uppercase tracking-wider mt-1">PMP, PgMP, PfMP, PCC, DTM</p>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400 text-center mt-0.5">Dhaka, Bangladesh</p>
               
               <div class="mt-8 space-y-4 text-xs">
                 <div class="border-t border-slate-200 dark:border-slate-800 pt-4 flex justify-between">
-                  <span class="text-slate-500 dark:text-slate-400">Total Industry Experience:</span>
-                  <span class="text-slate-900 dark:text-white font-bold">18+ Years</span>
+                  <span class="text-slate-500 dark:text-slate-400">Corporate Leadership:</span>
+                  <span class="text-slate-900 dark:text-white font-bold">20+ Years</span>
                 </div>
                 <div class="border-t border-slate-200 dark:border-slate-800 pt-4 flex justify-between">
-                  <span class="text-slate-500 dark:text-slate-400">Leaders Mentored:</span>
-                  <span class="text-slate-900 dark:text-white font-bold">500+ CXOs & Senior Execs</span>
+                  <span class="text-slate-500 dark:text-slate-400">Mentoring & Training:</span>
+                  <span class="text-slate-900 dark:text-white font-bold">1,000+ Hours</span>
                 </div>
                 <div class="border-t border-slate-200 dark:border-slate-800 pt-4 flex justify-between">
-                  <span class="text-slate-500 dark:text-slate-400">Offices Coached:</span>
-                  <span class="text-slate-900 dark:text-white font-bold">65+ Enterprises</span>
+                  <span class="text-slate-500 dark:text-slate-400">P&L Accountability:</span>
+                  <span class="text-slate-900 dark:text-white font-bold">~US$40M (NEC Corp)</span>
                 </div>
                 <div class="border-t border-slate-200 dark:border-slate-800 pt-4 flex justify-between">
-                  <span class="text-slate-500 dark:text-slate-400">Headquarters:</span>
-                  <span class="text-brand-accent font-bold">Dhaka, Bangladesh</span>
+                  <span class="text-slate-500 dark:text-slate-400">Direct Contact:</span>
+                  <a href="mailto:mmrshohagbd@gmail.com" class="text-brand-accent font-bold hover:underline">mmrshohagbd&#64;gmail.com</a>
                 </div>
               </div>
 
-              <div class="mt-8 pt-6 border-t border-slate-200 dark:border-slate-800">
+              <div class="mt-8 pt-6 border-t border-slate-200 dark:border-slate-800 space-y-3">
                 <a routerLink="/booking" class="w-full block text-center py-3 rounded-xl bg-gradient-to-r from-brand-accent to-brand-accentLight text-brand-dark font-bold text-xs uppercase tracking-wider hover:brightness-110 transition shadow-gold-glow">
-                  Book 1-on-1 Executive Consultation
+                  Book Initial Discovery Call
+                </a>
+                <a href="https://www.linkedin.com/in/coachmmr" target="_blank" rel="noopener" class="w-full block text-center py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-xs transition border border-slate-300 dark:border-slate-700">
+                  Connect on LinkedIn &rarr;
                 </a>
               </div>
             </div>
 
             <!-- Credentials Box -->
             <div class="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 space-y-3 shadow-sm">
-              <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white">Accreditations & Specializations</h4>
+              <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white">Credentials & Certifications</h4>
               <ul class="space-y-2 text-xs text-slate-700 dark:text-slate-300">
                 <li *ngFor="let cred of profile?.credentials" class="flex items-start gap-2">
                   <span class="text-brand-accent font-bold">✔</span>
@@ -80,19 +87,66 @@ import { ApiService } from '../../services/api.service';
           <!-- Right Column: Biography & Philosophy -->
           <div class="lg:col-span-7 space-y-8">
             <div>
-              <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-4">
-                The Architect Behind High-Velocity Organizations
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-4 font-cinzel">
+                Two Decades of Corporate Leadership & Executive Mastery
               </h2>
               <div class="prose prose-slate text-slate-600 dark:text-slate-300 text-sm leading-relaxed space-y-4">
                 <p>
                   {{ profile?.bioFull }}
                 </p>
                 <p>
-                  Throughout his career, Mukhlasur Rahaman has observed that organizations don’t fail due to lack of ambition or talent; they stumble because of broken execution rhythms, misaligned executive teams, and cultures paralyzed by fear of failure.
+                  MMR Rise combines three integrated service lines: <strong>Coaching, Training and Consulting</strong>. Grounded in more than two decades of corporate leadership across telecom and technology, Mukhlesur Rahman brings frontline perspective from running a country operation, negotiating multi-million-dollar agreements, dealing with regulatory bodies, and building high-performance executive teams.
                 </p>
-                <p>
-                  His proprietary frameworks blend human psychology with rigorous project delivery governance. By aligning executive mindsets with streamlined workflows, MMR has helped multinational subsidiaries, financial powerhouses, and high-growth corporations unlock untapped revenue and agility.
-                </p>
+              </div>
+            </div>
+
+            <!-- Proven Track Record Milestones -->
+            <div class="space-y-4 pt-4 border-t border-slate-200 dark:border-slate-800">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white font-cinzel">Executive Track Record</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="p-5 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-sm">
+                  <div class="text-brand-accent font-extrabold text-sm mb-1 uppercase tracking-wider">NEC Corporation</div>
+                  <h4 class="font-bold text-slate-800 dark:text-slate-200 text-sm mb-1">Country Rep & General Manager</h4>
+                  <p class="text-xs text-slate-600 dark:text-slate-400">Full P&L accountability managing approximately US$40 million in annual enterprise and telecommunications business in Bangladesh.</p>
+                </div>
+                <div class="p-5 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-sm">
+                  <div class="text-brand-accent font-extrabold text-sm mb-1 uppercase tracking-wider">Banglalink (VEON Group)</div>
+                  <h4 class="font-bold text-slate-800 dark:text-slate-200 text-sm mb-1">Head of Regulatory & Wholesale</h4>
+                  <p class="text-xs text-slate-600 dark:text-slate-400">Led Regulatory Operations, Wholesale Business, Corporate Communications, and delivered ~US$2 million Capex savings via fiber-exchange arrangements.</p>
+                </div>
+                <div class="p-5 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-sm">
+                  <div class="text-brand-accent font-extrabold text-sm mb-1 uppercase tracking-wider">Betopia Group</div>
+                  <h4 class="font-bold text-slate-800 dark:text-slate-200 text-sm mb-1">Adviser to Chairman & CEO</h4>
+                  <p class="text-xs text-slate-600 dark:text-slate-400">Advising group leadership since 2021 on building internal leadership teams, management pipelines, coaching, and organizational alignment.</p>
+                </div>
+                <div class="p-5 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-sm">
+                  <div class="text-brand-accent font-extrabold text-sm mb-1 uppercase tracking-wider">Good Neighbors Bangladesh</div>
+                  <h4 class="font-bold text-slate-800 dark:text-slate-200 text-sm mb-1">Steering Committee (Board) Member</h4>
+                  <p class="text-xs text-slate-600 dark:text-slate-400">Serving on the governance board contributing to strategic direction, executive stewardship, and sustainable social impact.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Education & Executive Development -->
+            <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 space-y-3">
+              <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white">Academic & Executive Education</h4>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-700 dark:text-slate-300">
+                <div class="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/60">
+                  <strong class="text-slate-900 dark:text-white block">BUET</strong>
+                  B.Sc. in Engineering
+                </div>
+                <div class="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/60">
+                  <strong class="text-slate-900 dark:text-white block">IBA, University of Dhaka</strong>
+                  Master of Business Administration (MBA)
+                </div>
+                <div class="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/60">
+                  <strong class="text-slate-900 dark:text-white block">INSEAD</strong>
+                  Leadership Development Programme
+                </div>
+                <div class="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/60">
+                  <strong class="text-slate-900 dark:text-white block">Cornell University</strong>
+                  Senior Executive Leadership Program (CEO Track)
+                </div>
               </div>
             </div>
 
@@ -129,7 +183,7 @@ import { ApiService } from '../../services/api.service';
                 "Leadership is not a title; it is the courage to create clarity in ambiguity, instill belief in times of crisis, and build an environment where others rise to their highest potential."
               </blockquote>
               <div class="mt-3 text-xs font-bold text-brand-dark dark:text-brand-accent tracking-wide uppercase">
-                &mdash; Mukhlasur Rahaman
+                &mdash; Mukhlesur Rahman, PMP, PgMP, PfMP, PCC, DTM
               </div>
             </div>
 

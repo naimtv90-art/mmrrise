@@ -18,8 +18,11 @@ import { RouterLink } from '@angular/router';
             <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight font-cinzel text-slate-900 dark:text-white">
               About MMR Rise
             </h1>
-            <p class="text-lg text-slate-600 dark:text-slate-300 font-light leading-relaxed">
-              <strong class="text-slate-900 dark:text-white">MMR Rise</strong> is a high-impact management consulting and leadership development firm founded by <strong class="text-brand-accent">Mukhlasur Rahaman</strong>. We catalyze enterprise agility, cultivate visionary leaders, and engineer sustainable corporate breakthroughs.
+            <p class="text-lg text-brand-accent font-medium italic">
+              &ldquo;Organizations grow best when people grow with them.&rdquo;
+            </p>
+            <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-light leading-relaxed">
+              <strong class="text-slate-900 dark:text-white">MMR Rise</strong> partners with CXOs, rising managers, and HR leaders to build leadership that performs and earns trust. Founded by <strong class="text-brand-accent">Mukhlesur Rahman, PMP, PgMP, PfMP, PCC, DTM</strong>, the work combines three integrated service lines: <strong>Coaching, Training and Consulting</strong>. All three are grounded in more than two decades of corporate leadership across telecom and technology, including regulatory strategy, stakeholder relations, commercial sales, and full P&L responsibility.
             </p>
           </div>
           <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-3xl bg-slate-100 dark:bg-white/10 backdrop-blur-md p-4 border border-slate-200 dark:border-white/20 shadow-xl flex items-center justify-center shrink-0">

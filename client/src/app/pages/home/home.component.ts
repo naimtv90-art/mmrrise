@@ -25,31 +25,31 @@ import { ApiService, ServiceItem, CourseItem, MediaItem } from '../../services/a
             </div>
 
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-slate-900 dark:text-white">
-              Transforming Organizations. <br>
-              <span class="gold-gradient-text font-cinzel">Elevating Leaders.</span>
+              Organizations grow best <br>
+              <span class="gold-gradient-text font-cinzel">when people grow with them.</span>
             </h1>
 
             <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-2xl font-light leading-relaxed">
-              Welcome to <strong class="text-brand-accent">MMR Rise</strong>. Led by <strong class="text-slate-900 dark:text-white font-medium">Mukhlasur Rahaman</strong> — Executive Coach, Enterprise Transformation Consultant & Corporate Trainer. We partner with Founders, CXOs, and ambitious organizations to align strategy, master project execution, and build fearless high-performance cultures.
+              Welcome to <strong class="text-brand-accent">MMR Rise</strong>. Led by <strong class="text-slate-900 dark:text-white font-medium">Mukhlesur Rahman, PMP, PgMP, PfMP, PCC, DTM</strong> — Executive Coach, Trainer & Strategic Advisor. Grounded in more than two decades of corporate leadership across telecom and technology, we partner with CXOs, rising managers, and HR leaders to build leadership that performs and earns trust.
             </p>
 
             <!-- Action Buttons -->
             <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a routerLink="/booking"
                  class="px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider bg-gradient-to-r from-brand-accent to-brand-accentLight text-brand-dark shadow-gold-glow hover:brightness-110 transition active:scale-95 text-center">
-                Book Paid Consultation
+                Book Discovery Conversation
               </a>
               <a routerLink="/services"
                  class="px-8 py-4 rounded-xl text-sm font-semibold tracking-wide bg-slate-100 dark:bg-slate-800/80 hover:bg-slate-200 dark:hover:bg-slate-700/80 text-slate-900 dark:text-white border border-slate-300 dark:border-slate-700 transition active:scale-95 text-center">
-                Explore Consulting Services
+                Explore Service Catalog
               </a>
             </div>
 
             <!-- Badges -->
             <div class="pt-6 border-t border-slate-200 dark:border-slate-800/80 flex flex-wrap items-center gap-4 text-xs text-slate-500 dark:text-slate-400 justify-center lg:justify-start">
-              <span class="flex items-center gap-1.5"><span class="text-brand-accent">✓</span> PMP & Agile Governance</span>
-              <span class="flex items-center gap-1.5"><span class="text-brand-accent">✓</span> 1-on-1 C-Suite Retainers</span>
-              <span class="flex items-center gap-1.5"><span class="text-brand-accent">✓</span> Online & Offline Masterclasses</span>
+              <span class="flex items-center gap-1.5"><span class="text-brand-accent">✓</span> ICF Certified Executive Coaching</span>
+              <span class="flex items-center gap-1.5"><span class="text-brand-accent">✓</span> PMI PMP, PgMP & PfMP Certified</span>
+              <span class="flex items-center gap-1.5"><span class="text-brand-accent">✓</span> 20+ Years Corporate Leadership</span>
             </div>
           </div>
 
@@ -59,33 +59,33 @@ import { ApiService, ServiceItem, CourseItem, MediaItem } from '../../services/a
               <div class="absolute -inset-1.5 rounded-3xl bg-gradient-to-r from-brand-blue via-brand-accentLight to-brand-accent opacity-30 dark:opacity-40 blur-lg"></div>
               
               <div class="relative bg-white dark:bg-gradient-to-b dark:from-slate-900 dark:to-brand-dark border border-slate-200 dark:border-slate-700/80 rounded-2xl p-6 sm:p-8 shadow-2xl">
-                <!-- Mukhlasur Rahaman Executive Portrait Card -->
+                <!-- Mukhlesur Rahman Executive Portrait Card -->
                 <div class="relative mx-auto w-40 h-40 rounded-2xl overflow-hidden border-2 border-brand-accent/70 shadow-xl mb-6 bg-slate-100 dark:bg-slate-900 group">
-                  <img src="mukhlasur-rahaman.jpg" alt="Mukhlasur Rahaman" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                  <img src="mukhlasur-rahaman.jpg" alt="Mukhlesur Rahman" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
                   <div class="absolute bottom-0 inset-x-0 bg-brand-accent text-brand-dark text-[9px] font-extrabold text-center py-0.5 uppercase tracking-wider shadow">
                     MMR RISE ADVISORY
                   </div>
                 </div>
 
                 <div class="text-center space-y-1 mb-6">
-                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white font-cinzel">Mukhlasur Rahaman</h3>
-                  <p class="text-xs text-brand-accent font-medium tracking-wide">Executive Coach & Managing Consultant</p>
-                  <p class="text-xs text-slate-500 dark:text-slate-400">Founder & Principal, <strong class="text-slate-800 dark:text-slate-200">MMR Rise</strong></p>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white font-cinzel">Mukhlesur Rahman</h3>
+                  <p class="text-xs text-brand-accent font-medium tracking-wide">PMP, PgMP, PfMP, PCC, DTM</p>
+                  <p class="text-xs text-slate-500 dark:text-slate-400">Executive Coach | Trainer | Strategic Advisor</p>
                 </div>
 
                 <!-- Credential highlights -->
                 <div class="space-y-3 bg-slate-50 dark:bg-brand-navy/60 p-4 rounded-xl border border-slate-200 dark:border-slate-800 text-xs">
                   <div class="flex items-center justify-between py-1 border-b border-slate-200 dark:border-slate-800/80">
-                    <span class="text-slate-500 dark:text-slate-400">Experience</span>
-                    <span class="text-slate-900 dark:text-white font-semibold">18+ Years Corporate Advisory</span>
+                    <span class="text-slate-500 dark:text-slate-400">Corporate Track</span>
+                    <span class="text-slate-900 dark:text-white font-semibold">20+ Years Leadership</span>
                   </div>
                   <div class="flex items-center justify-between py-1 border-b border-slate-200 dark:border-slate-800/80">
-                    <span class="text-slate-500 dark:text-slate-400">Keynote Speaker</span>
-                    <span class="text-slate-900 dark:text-white font-semibold">100+ Summits & Offsites</span>
+                    <span class="text-slate-500 dark:text-slate-400">P&L Accountability</span>
+                    <span class="text-slate-900 dark:text-white font-semibold">~US$40M NEC Corp & Banglalink</span>
                   </div>
                   <div class="flex items-center justify-between py-1">
-                    <span class="text-slate-500 dark:text-slate-400">Core Focus</span>
-                    <span class="text-brand-accent font-semibold">Transformation & PMO</span>
+                    <span class="text-slate-500 dark:text-slate-400">Coaching Hours</span>
+                    <span class="text-brand-accent font-semibold">1,000+ Mentoring Hours</span>
                   </div>
                 </div>
 
@@ -107,20 +107,20 @@ import { ApiService, ServiceItem, CourseItem, MediaItem } from '../../services/a
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-slate-200 dark:divide-slate-800">
           <div class="p-2">
-            <div class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-cinzel">500+</div>
-            <div class="text-xs sm:text-sm text-brand-accent font-medium mt-1">C-Suite & Leaders Coached</div>
+            <div class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-cinzel">1,000+</div>
+            <div class="text-xs sm:text-sm text-brand-accent font-medium mt-1">Mentoring & Training Hours</div>
           </div>
           <div class="p-2">
-            <div class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-cinzel">65+</div>
-            <div class="text-xs sm:text-sm text-brand-accent font-medium mt-1">Organizations Transformed</div>
+            <div class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-cinzel">20+</div>
+            <div class="text-xs sm:text-sm text-brand-accent font-medium mt-1">Years Corporate Leadership</div>
           </div>
           <div class="p-2">
-            <div class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-cinzel">12,000+</div>
-            <div class="text-xs sm:text-sm text-brand-accent font-medium mt-1">Hours of Training Delivered</div>
+            <div class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-cinzel">~$40M</div>
+            <div class="text-xs sm:text-sm text-brand-accent font-medium mt-1">P&L Business Managed</div>
           </div>
           <div class="p-2">
-            <div class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-cinzel">99.4%</div>
-            <div class="text-xs sm:text-sm text-brand-accent font-medium mt-1">Client Satisfaction Rate</div>
+            <div class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-cinzel">99.5%</div>
+            <div class="text-xs sm:text-sm text-brand-accent font-medium mt-1">Client Recommendation Rate</div>
           </div>
         </div>
       </div>
@@ -131,13 +131,13 @@ import { ApiService, ServiceItem, CourseItem, MediaItem } from '../../services/a
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <span class="text-xs font-bold uppercase tracking-widest text-brand-blue bg-blue-50 dark:bg-brand-blue/10 px-3 py-1 rounded-full border border-blue-200 dark:border-brand-blue/30">
-            End-To-End Advisory &bull; MMR Rise
+            Three Integrated Service Lines &bull; MMR Rise
           </span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            MMR Rise Consulting & Coaching Services
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight font-cinzel">
+            Coaching, Training & Strategic Consulting
           </h2>
           <p class="text-slate-600 dark:text-slate-300 text-base leading-relaxed">
-            From organizational restructuring and high-stakes PMO setup to confidential 1-on-1 executive mentoring, discover structured frameworks crafted for measurable impact by MMR Rise.
+            Partnering with CXOs, rising managers, and HR leaders to build leadership that performs and earns trust. Grounded in two decades of corporate leadership across telecom, technology, and governance.
           </p>
         </div>
 
@@ -203,7 +203,7 @@ import { ApiService, ServiceItem, CourseItem, MediaItem } from '../../services/a
               Course Sales: <span class="gold-gradient-text">Online & Offline Platforms</span>
             </h2>
             <p class="text-slate-600 dark:text-slate-400 text-sm">
-              World-class cohorts, live interactive virtual labs, and in-person executive bootcamps led personally by Mukhlasur Rahaman.
+              World-class cohorts, live interactive virtual labs, and in-person executive bootcamps led personally by Mukhlesur Rahman, PMP, PgMP, PfMP, PCC, DTM.
             </p>
           </div>
           <div class="mt-6 md:mt-0">
@@ -268,7 +268,7 @@ import { ApiService, ServiceItem, CourseItem, MediaItem } from '../../services/a
               Electrify Your Next Corporate Summit or Annual Offsite
             </h2>
             <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
-              Mukhlasur Rahaman has delivered keynotes for leading industry forums, banking summits, and corporate leadership retreats across Bangladesh and Southeast Asia. Book MMR to inspire your leadership corps.
+              Mukhlesur Rahman has delivered keynotes for leading industry forums, banking summits, TEDx events, and corporate leadership retreats across Bangladesh and the region.
             </p>
             <div class="pt-4 flex flex-wrap gap-4">
               <a routerLink="/speaking" class="px-6 py-3 rounded-xl bg-brand-accent text-brand-dark font-bold text-xs uppercase tracking-wider hover:brightness-110 transition">
@@ -290,7 +290,7 @@ import { ApiService, ServiceItem, CourseItem, MediaItem } from '../../services/a
           Ready to Elevate Your Leadership or Transform Your PMO?
         </h2>
         <p class="text-slate-600 dark:text-slate-300 text-base leading-relaxed">
-          Schedule a direct 1-on-1 Strategy Discovery Call or an Executive Leadership Deep-Dive with Mukhlasur Rahaman today. Select your preferred date and time on our online booking calendar.
+          Schedule a direct 1-on-1 Discovery Conversation or an Executive Coaching session with Mukhlesur Rahman today. Select your preferred date and time on our online calendar.
         </p>
         <div class="pt-2">
           <a routerLink="/booking" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-brand-accent to-brand-accentLight text-brand-dark font-bold text-sm uppercase tracking-wider shadow-gold-glow hover:brightness-110 hover:scale-105 transition duration-200">

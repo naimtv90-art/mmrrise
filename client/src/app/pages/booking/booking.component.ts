@@ -20,7 +20,7 @@ import { ApiService, BookingPackage, BookingSlot } from '../../services/api.serv
             Book a Strategic Consultation
           </h1>
           <p class="text-lg text-slate-600 dark:text-slate-300 font-light leading-relaxed">
-            Direct, confidential 1-on-1 advisory with Mukhlasur Rahaman. Select your consultation tier, choose your preferred slot, and finalize your booking.
+            Direct, confidential advisory with Mukhlesur Rahman, PMP, PgMP, PfMP, PCC, DTM. Select your consultation tier, choose your preferred slot, and finalize your booking.
           </p>
         </div>
       </div>

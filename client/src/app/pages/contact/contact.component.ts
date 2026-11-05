@@ -65,18 +65,20 @@ import { ApiService, FaqItem } from '../../services/api.service';
                 <div>
                   <label class="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Phone / WhatsApp Number</label>
                   <input type="tel" [(ngModel)]="form.phone" name="phone"
-                         placeholder="+880 1711 234567"
+                         placeholder="+880 1714 113030"
                          class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-accent text-sm bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500">
                 </div>
                 <div>
-                  <label class="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Area of Interest</label>
+                  <label class="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Service Interest</label>
                   <select [(ngModel)]="form.serviceInterest" name="serviceInterest"
                           class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-accent text-sm bg-white dark:bg-slate-800 text-slate-900 dark:text-white">
                     <option value="General">General Inquiry</option>
-                    <option value="Executive Coaching">1-on-1 Executive Coaching</option>
-                    <option value="Organizational Transformation">Organizational Transformation</option>
-                    <option value="PMO Setup & Governance">Project Management & PMO Advisory</option>
-                    <option value="Courses & Workshops">Courses & Executive Bootcamps</option>
+                    <option value="Coaching for CXOs">Coaching for CXOs (1:1, Transition, Peer Circle)</option>
+                    <option value="CXO Pathway">CXO Pathway Program (Rising Managers)</option>
+                    <option value="Coaching for HR">Coaching for HR Leaders & Culture</option>
+                    <option value="Corporate Training">Corporate Training Programs</option>
+                    <option value="Consulting & Advisory">Consulting & Strategic Advisory</option>
+                    <option value="Working with Boards">Working with Boards</option>
                     <option value="Keynote Speaking">Keynote Speech Invitation</option>
                   </select>
                 </div>
@@ -92,7 +94,7 @@ import { ApiService, FaqItem } from '../../services/api.service';
               <div>
                 <label class="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Your Detailed Message *</label>
                 <textarea rows="4" [(ngModel)]="form.message" name="message" required
-                          placeholder="How can Mukhlasur Rahaman and MMR Rise support you or your organization?"
+                          placeholder="How can Mukhlesur Rahman and MMR Rise support you or your organization?"
                           class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-accent text-sm bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500"></textarea>
               </div>
 
@@ -114,6 +116,7 @@ import { ApiService, FaqItem } from '../../services/api.service';
                 <div>
                   <span class="text-xs font-bold uppercase tracking-widest text-brand-accent">Executive Office</span>
                   <h3 class="text-2xl font-bold font-cinzel text-slate-900 dark:text-white">MMR Rise</h3>
+                  <div class="text-[11px] text-slate-500 dark:text-slate-400">Mukhlesur Rahman, PMP, PgMP, PfMP, PCC, DTM</div>
                 </div>
               </div>
 
@@ -121,8 +124,8 @@ import { ApiService, FaqItem } from '../../services/api.service';
                 <div class="flex items-start gap-3">
                   <span class="text-brand-accent text-base">📍</span>
                   <div>
-                    <span class="text-slate-500 dark:text-slate-400 block">Location:</span>
-                    <span class="text-slate-900 dark:text-white font-medium">Gulshan-2, Dhaka-1212, Bangladesh</span>
+                    <span class="text-slate-500 dark:text-slate-400 block">Locations:</span>
+                    <span class="text-slate-900 dark:text-white font-medium">Dhaka & Chattogram (In-person) &bull; Global (Live Online)</span>
                   </div>
                 </div>
 
@@ -130,15 +133,23 @@ import { ApiService, FaqItem } from '../../services/api.service';
                   <span class="text-brand-accent text-base">✉</span>
                   <div>
                     <span class="text-slate-500 dark:text-slate-400 block">Direct Email:</span>
-                    <a href="mailto:contact@mmrrise.com" class="text-brand-accent font-medium hover:underline">contact&#64;mmrrise.com</a>
+                    <a href="mailto:mmrshohagbd@gmail.com" class="text-brand-accent font-medium hover:underline">mmrshohagbd&#64;gmail.com</a>
                   </div>
                 </div>
 
                 <div class="flex items-start gap-3">
                   <span class="text-brand-accent text-base">📞</span>
                   <div>
-                    <span class="text-slate-500 dark:text-slate-400 block">Office Phone / WhatsApp:</span>
-                    <span class="text-slate-900 dark:text-white font-medium">+880 1711 000000</span>
+                    <span class="text-slate-500 dark:text-slate-400 block">Direct Phone / WhatsApp:</span>
+                    <a href="tel:+8801714113030" class="text-slate-900 dark:text-white font-medium hover:underline">+8801714113030</a>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <span class="text-brand-accent text-base">🔗</span>
+                  <div>
+                    <span class="text-slate-500 dark:text-slate-400 block">LinkedIn:</span>
+                    <a href="https://www.linkedin.com/in/coachmmr" target="_blank" rel="noopener" class="text-brand-accent font-medium hover:underline">linkedin.com/in/coachmmr</a>
                   </div>
                 </div>
 
@@ -156,10 +167,10 @@ import { ApiService, FaqItem } from '../../services/api.service';
             <div class="bg-gradient-to-br from-brand-accent/10 via-white dark:via-brand-surface to-brand-blue/5 border border-brand-accent/30 rounded-3xl p-6 text-center space-y-3 shadow-sm">
               <h4 class="font-bold text-slate-900 dark:text-white text-sm">Need Direct Strategic Advice Immediately?</h4>
               <p class="text-xs text-slate-600 dark:text-slate-300">
-                Skip the back-and-forth email scheduling and secure a direct paid consultation slot with Mukhlasur Rahaman on our live calendar.
+                Skip the back-and-forth email scheduling and secure a direct paid discovery or consultation session with Mukhlesur Rahman on our calendar.
               </p>
               <a routerLink="/booking" class="inline-block px-6 py-2.5 rounded-xl bg-gradient-to-r from-brand-accent to-brand-accentLight text-brand-dark font-extrabold text-xs uppercase tracking-wider hover:brightness-110 shadow-gold-glow transition">
-                Go to Paid Booking Calendar
+                Go to Consultation Booking Calendar
               </a>
             </div>
           </div>

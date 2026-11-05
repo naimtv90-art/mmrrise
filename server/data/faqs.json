@@ -1,33 +1,137 @@
 [
   {
-    "category": "Consulting & Transformation",
-    "question": "How does MMR Rise approach an organizational consulting engagement?",
-    "answer": "Our engagements follow a battle-tested 4-phase framework: 1) Diagnostic Audit (analyzing people, processes, and current bottlenecks), 2) Blueprint Design (co-crafting an actionable roadmap), 3) Guided Execution (hands-on facilitation, PMO governance, and team alignment), and 4) Institutionalization (measuring KPIs, continuous retrospectives, and ensuring self-sustaining growth)."
+    "category": "About MMR Rise",
+    "question": "What does MMR Rise do?",
+    "answer": "MMR Rise offers three services: coaching, training and consulting. We help leaders and organizations build leadership that performs and earns trust."
   },
   {
-    "category": "Consulting & Transformation",
-    "question": "What size of companies do you typically work with?",
-    "answer": "We consult with emerging mid-market firms ($5M-$50M turnover), fast-scaling tech companies, multinational subsidiaries, and large established conglomerates looking to modernize their operational structures, culture, and project governance."
+    "category": "About MMR Rise",
+    "question": "Who is behind MMR Rise?",
+    "answer": "Mukhlesur Rahman, an ICF Professional Certified Coach (PCC) with PMP, PgMP, PfMP and DTM credentials. He has more than 20 years of corporate leadership across telecom and technology, including regulatory strategy, stakeholder relations, sales and P&L leadership at Banglalink and NEC Corporation. He also serves on the Steering Committee (Board) of Good Neighbors Bangladesh."
   },
   {
-    "category": "Executive Coaching",
-    "question": "How confidential are the 1-on-1 executive coaching sessions?",
-    "answer": "All individual coaching sessions are held under strict non-disclosure agreements (NDA). The conversations serve as a safe, private sounding board for C-level executives, founders, and managing directors to address high-stakes dilemmas openly."
+    "category": "About MMR Rise",
+    "question": "Who do you work with?",
+    "answer": "Coaching: Boards, CXOs and emerging mid-level managers who aspire to be CXOs. Team coaching for a group of people or managers working toward a shared goal.\nTraining: Individual contributors, front-line staff, managers, cross-functional managers, managers of managers and organization leaders.\nConsulting: CXOs, and board members who sponsor leadership development in their organizations. We help set up the processes and organization for success and positive impact, transform the organization to keep pace with society, and find its purpose and align its values. Areas include corporate affairs, public policy advocacy and sales setup."
   },
   {
-    "category": "Executive Coaching",
-    "question": "What is the typical duration of an Executive Coaching retainer?",
-    "answer": "True behavioral and leadership transformation takes sustained practice. Our primary retainers run for 6 months or 12 months, featuring bi-weekly 60-to-90-minute strategic sessions, unlimited urgent text/email sounding board support, and 360-degree stakeholder feedback."
+    "category": "About MMR Rise",
+    "question": "What is the difference between coaching, training and consulting?",
+    "answer": "Coaching helps you find your own answers through questions, reflection and accountability. Training builds specific skills, and a shared understanding of values, in a group. Consulting gives you recommendations and a plan for a business or leadership challenge. Many clients combine them, for example a training program for a team with coaching for its leaders."
   },
   {
-    "category": "Courses & Training",
-    "question": "Are the courses available both online and offline?",
-    "answer": "Yes! MMR Rise delivers high-impact learning programs across both modalities: live virtual interactive cohort-based courses for global learners, as well as offline executive masterclasses and bootcamps at prestigious convention centers in Dhaka."
+    "category": "About MMR Rise",
+    "question": "Why choose MMR Rise over a trainer or coach without corporate experience?",
+    "answer": "Our work is grounded in real corporate leadership: running a country operation, negotiating major contracts, dealing with regulators and building leadership teams. Examples and exercises come from situations leaders actually face, including in Bangladesh."
   },
   {
-    "category": "Booking & Speaking",
-    "question": "How can we book Mukhlasur Rahaman for a keynote speech or corporate summit?",
-    "answer": "You can request a speaker booking directly via our 'Speaking' page or through our Paid Booking calendar. Our engagement team will evaluate your event date, theme, and audience profile within 24 hours to finalize terms."
+    "category": "Coaching",
+    "question": "What does executive coaching involve?",
+    "answer": "A confidential, structured series of one-to-one conversations on leadership presence, decision-making, stakeholder influence and leading your team. You set the goals, and the coach helps you think clearly, test your assumptions and follow through."
+  },
+  {
+    "category": "Coaching",
+    "question": "Is coaching the same as therapy or mentoring?",
+    "answer": "No. Coaching is not therapy or counseling. Mentoring means sharing experience and advice, while coaching mainly asks questions so you reach your own decisions. Both can be part of the work where it helps you."
+  },
+  {
+    "category": "Coaching",
+    "question": "Is coaching confidential?",
+    "answer": "Coaching follows the ICF Code of Ethics. When an organization sponsors the coaching, what is shared with the sponsor is agreed with you in advance, before the work starts. Sponsors never receive the content of coaching conversations; they see only the milestones agreed in advance."
+  },
+  {
+    "category": "Coaching",
+    "question": "How long does a coaching engagement last?",
+    "answer": "It depends on your goals. We agree the length and number of sessions in the discovery conversation, and review progress along the way. Engagements typically run from 3 months to 2 years. Each one-to-one session lasts about 45 to 60 minutes, and group coaching sessions can run 2 to 3 hours."
+  },
+  {
+    "category": "Coaching",
+    "question": "I am a mid-level manager who wants to become a CXO. Is coaching right for me?",
+    "answer": "Yes. The CXO Pathway Program is designed for leaders moving from functional expertise to enterprise leadership. It covers strategic thinking, executive presence, commercial and P&L understanding, stakeholder influence and personal leadership brand. Individual coaching is also available, and some organizations sponsor it for high-potential leaders."
+  },
+  {
+    "category": "Coaching",
+    "question": "I am an HR leader. How can you support me?",
+    "answer": "We offer coaching for HR leaders, support in designing talent and succession coaching for your high-potential leaders, and a Coaching Culture Program that builds coaching skills in your HR team and internal managers."
+  },
+  {
+    "category": "Coaching",
+    "question": "What is a CXO Peer Circle?",
+    "answer": "A small, confidential group of CXOs who meet regularly to think through real leadership challenges, facilitated by Mukhlesur Rahman."
+  },
+  {
+    "category": "Training",
+    "question": "What training topics do you offer?",
+    "answer": "Programs are grouped by audience:\n• Managers: leading people, communication and feedback, negotiation, problem solving, project management, PMP exam preparation, time and priority management, sales and account management, performance management, accountability and productivity\n• Managers of managers: leading leaders, coaching skills, strategy to execution, stakeholder management, advanced negotiation, program and portfolio management, decision-making, leading change\n• Organization leaders: leading through complexity, leadership team alignment, stakeholder trust and corporate affairs, ethical leadership, AI-era leadership, coaching culture, succession"
+  },
+  {
+    "category": "Training",
+    "question": "What formats do you offer?",
+    "answer": "Half-day and full-day workshops, shorter 3-hour sessions, online and hybrid delivery, multi-session cohort programs with optional coaching between sessions, and customized in-house programs. We also train internal trainers and champions."
+  },
+  {
+    "category": "Training",
+    "question": "Can the training be customized for our company?",
+    "answer": "Yes. In-house programs are built around your organization's needs, using your industry, your situation and your people's real challenges."
+  },
+  {
+    "category": "Training",
+    "question": "Do you train in Bangla or English?",
+    "answer": "Sessions can be run in English, Bangla or a mix, depending on your participants."
+  },
+  {
+    "category": "Training",
+    "question": "Do you offer PMP exam preparation?",
+    "answer": "Yes. Mukhlesur Rahman holds the PMP, PgMP and PfMP certifications and has run PMP preparation programs. Contact us for the current schedule and format. We also offer PgMP and PfMP cohorts for senior professionals who manage project managers or deliver specific benefits for their organization."
+  },
+  {
+    "category": "Training",
+    "question": "What is included in AI-era leadership training?",
+    "answer": "It helps leaders understand how AI may change organizations and decide what to do about it. It focuses on leadership awareness and decisions, not technical AI skills."
+  },
+  {
+    "category": "Training",
+    "question": "Can you run a program for a single team or a whole group of managers?",
+    "answer": "Yes. We can work with one team, a cohort of managers across departments, or a leadership-development program across the organization."
+  },
+  {
+    "category": "Training",
+    "question": "How do we know the training worked?",
+    "answer": "Before the program, we agree on the outcomes you want and how they will be measured. Multi-session programs with coaching between sessions help participants apply what they learned at work."
+  },
+  {
+    "category": "Consulting and Advisory",
+    "question": "What consulting do you offer?",
+    "answer": "• Leadership team building\n• Leadership capability roadmaps\n• Stakeholder relations and corporate affairs strategy\n• Regulatory strategy, particularly in telecom, technology and other regulated sectors\n• Purpose and strategy alignment\n• Organizational transformation"
+  },
+  {
+    "category": "Consulting and Advisory",
+    "question": "Do you work with boards?",
+    "answer": "Yes, as sponsors. Board members are welcome to start with a conversation about their organization's leadership needs. From there, we design coaching, training and leadership-team programs for the whole organization. We also help board members settle into their role and contribute more effectively."
+  },
+  {
+    "category": "Consulting and Advisory",
+    "question": "Can you help us build a leadership team?",
+    "answer": "Yes. This work covers defining roles, building alignment around a shared agenda and creating the working practices a leadership team needs to perform. It draws on experience building an internal leadership team and management pipeline as adviser to a business group's Chairman and CEO."
+  },
+  {
+    "category": "Working with MMR Rise",
+    "question": "How do we get started?",
+    "answer": "Start with a discovery conversation. We discuss your leaders, your team and your business context, then agree on scope, outcomes and measures of success. After that comes delivery, then a review of progress and next steps. To begin, fill in the contact form on this website or email contact@mmrrise.com."
+  },
+  {
+    "category": "Working with MMR Rise",
+    "question": "How much does it cost?",
+    "answer": "Fees depend on the service, the number of participants, the length of the engagement and the amount of customization. We share a clear proposal after the discovery conversation."
+  },
+  {
+    "category": "Working with MMR Rise",
+    "question": "Do you work in person or online?",
+    "answer": "Both. In-person sessions are held in Dhaka and Chattogram, and live online or hybrid sessions allow us to work with teams in other locations."
+  },
+  {
+    "category": "Working with MMR Rise",
+    "question": "Can individuals enroll, or only companies?",
+    "answer": "Individual leaders can engage a coach directly. Organizations, founders, SME owners and senior leaders can sponsor coaching or commission training and consulting programs."
   }
 ]
-

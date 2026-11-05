@@ -5,7 +5,7 @@ import { isPlatformBrowser } from '@angular/common';
   providedIn: 'root'
 })
 export class ThemeService {
-  isDark = true; // default to rich executive dark theme
+  isDark = false; // default to light theme
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {
     if (isPlatformBrowser(this.platformId)) {
@@ -13,7 +13,7 @@ export class ThemeService {
       if (savedTheme) {
         this.isDark = savedTheme === 'dark';
       } else {
-        this.isDark = true;
+        this.isDark = false; // default to light theme
       }
       this.applyTheme();
     }

@@ -1,88 +1,105 @@
 [
   {
-    "id": "consulting",
-    "title": "Strategic Consulting",
-    "subtitle": "High-Impact Enterprise & Business Strategy Advisory",
-    "badge": "Strategy & Growth",
-    "icon": "briefcase",
-    "description": "Comprehensive corporate advisory to diagnose operational bottlenecks, formulate resilient business strategies, and drive sustainable market expansion for growth-oriented enterprises.",
-    "deliverables": [
-      "Enterprise Capability & Readiness Assessment",
-      "Market Positioning & Competitive Landscape Strategy",
-      "Business Model Innovation & Revenue Optimization",
-      "Quarterly Strategic Milestone Review & Governance"
-    ],
-    "duration": "3 - 12 Months Engagement",
-    "targetAudience": "Enterprises, Mid-Market Companies, Fast-Growing Startups",
-    "deliverableFormat": "Hybrid (On-site diagnostic + Executive Boardrooms)"
-  },
-  {
-    "id": "organizational-transformation",
-    "title": "Organizational Transformation",
-    "subtitle": "Cultural, Structural & Agile Agility Transformation",
-    "badge": "Culture & Systems",
-    "icon": "refresh-cw",
-    "description": "Guiding enterprises through profound operational shifts, cultural realignment, and leadership readiness to stay resilient in rapidly evolving disruptive industries.",
-    "deliverables": [
-      "Culture Gap Audit & Organizational Health Index",
-      "Cross-Functional Team Restructuring & Change Management",
-      "Agile & High-Performance Operating System Integration",
-      "Change Champion Enablement & Leadership Alignment"
-    ],
-    "duration": "6 - 18 Months",
-    "targetAudience": "Corporations transitioning to modern management models",
-    "deliverableFormat": "Deep-Dive Workshops, Change Roadmaps & Shadowing"
-  },
-  {
-    "id": "project-management-consultancy",
-    "title": "Project Management Consultancy",
-    "subtitle": "Global Standards, PMO Setup & Delivery Governance",
-    "badge": "Execution & Delivery",
-    "icon": "check-square",
-    "description": "Transforming chaotic project delivery into predictable, on-time, within-budget success through proven PMO methodologies (PMP, Agile, Scrum, Lean PM).",
-    "deliverables": [
-      "Enterprise PMO (Project Management Office) Architecture & Setup",
-      "Project Risk, Governance & Quality Control Frameworks",
-      "Portfolio Prioritization & Resource Capacity Planning",
-      "Hands-on Rescue for At-Risk Mission-Critical Projects"
-    ],
-    "duration": "Project-based or Retainer Advisory",
-    "targetAudience": "PMOs, Engineering, IT, Infrastructure & Large Project Teams",
-    "deliverableFormat": "PMO Framework, Tooling Integration & Mentorship"
-  },
-  {
-    "id": "organizational-coaching",
-    "title": "Organizational Coaching",
-    "subtitle": "Team Synergy, Collective Intelligence & High-Trust Culture",
-    "badge": "Team Excellence",
-    "icon": "users",
-    "description": "Unlocking collective team performance, dismantling communication silos, and fostering an environment of psychological safety, ownership, and collaborative accountability.",
-    "deliverables": [
-      "Team Dynamics Diagnostic & Trust Benchmark",
-      "Systemic Team Coaching Sessions (Bi-weekly)",
-      "Conflict Resolution & Cross-Departmental Alignment",
-      "Goal Setting Framework (OKRs & KPI Cascades)"
-    ],
-    "duration": "3 - 6 Months",
-    "targetAudience": "Department Heads, Cross-Functional Units, Scale-up Teams",
-    "deliverableFormat": "Interactive Facilitation & Systemic Team Labs"
-  },
-  {
-    "id": "executive-coaching",
-    "title": "Executive Coaching",
-    "subtitle": "Confidential 1-on-1 Leadership Mentorship for C-Suite & Founders",
-    "badge": "Leadership Mastery",
+    "id": "coaching-cxos",
+    "title": "Coaching for CXOs",
+    "subtitle": "Executive Coaching (1:1), CXO Transition & Confidential Peer Circles",
+    "badge": "C-Suite Coaching",
     "icon": "award",
-    "description": "Private, high-caliber coaching designed for CEOs, Managing Directors, Board Members, and Senior Executives to sharpen strategic presence, executive decision-making, and emotional intelligence.",
+    "description": "Coaching is for leaders who want clarity, grounded confidence, ethical judgment and authentic presence in complex, high-stakes environments. Tailored 1:1 engagements, transition support for new executive roles, and facilitated CXO Peer Circles.",
     "deliverables": [
-      "360-Degree Executive Leadership Assessment",
-      "Personalized 6-Month Executive Development Plan",
-      "Confidential Bi-Weekly Strategic Sounding Board Sessions",
-      "Crisis Leadership & High-Stakes Negotiation Advisory"
+      "Executive Coaching (1:1): Confidential, structured engagement on leadership presence, decision-making, stakeholder influence and leading the leadership team",
+      "CXO Transition Coaching: Focused onboarding and transition support for leaders stepping into a new CEO, COO or CXO role, or entering a new enterprise",
+      "CXO Peer Circle: Small, confidential group of peer CXOs meeting regularly to think through real leadership challenges, facilitated by Mukhlesur Rahman",
+      "ICF Code of Ethics Compliance: Complete confidentiality where sponsors receive only pre-agreed milestone updates, never private conversation content"
     ],
-    "duration": "6 - 12 Months (1-on-1 Retainer)",
-    "targetAudience": "CEOs, Founders, Directors, High-Potential VP Executives",
-    "deliverableFormat": "1-on-1 Confidential Sessions (In-Person / Virtual)"
+    "duration": "3 Months to 2 Years (45-60 min 1:1 / 2-3 hr group)",
+    "targetAudience": "CEOs, COOs, CFOs, Managing Directors, Board Members & Senior CXOs",
+    "deliverableFormat": "In-Person (Dhaka/Chattogram) or Live Virtual / Hybrid"
+  },
+  {
+    "id": "coaching-emerging-leaders",
+    "title": "Coaching for Rising Managers & Future CXOs",
+    "subtitle": "The CXO Pathway Program & High-Potential Individual Coaching",
+    "badge": "Succession & Growth",
+    "icon": "trending-up",
+    "description": "Designed for ambitious leaders stepping up from functional expertise to enterprise-wide leadership. Accelerates strategic thinking, commercial and P&L intuition, executive presence, and personal leadership brand.",
+    "deliverables": [
+      "CXO Pathway Program: Rigorous cohort program for leaders moving from functional management to enterprise leadership",
+      "Commercial & P&L Acumen: Translating departmental targets into enterprise-level commercial viability and EBITDA awareness",
+      "Executive Presence & Stakeholder Influence: Mastering high-stakes communication, influence without authority, and board presence",
+      "High-Potential 1:1 Coaching: Focused individual coaching sponsored by organizations as part of succession planning"
+    ],
+    "duration": "3 - 6 Months Cohort / 1-on-1 Engagements",
+    "targetAudience": "Emerging Mid-Level Managers, Functional Heads, High-Potential Directors",
+    "deliverableFormat": "Interactive Cohort Labs, 1:1 Coaching & Strategic Simulations"
+  },
+  {
+    "id": "coaching-hr-leaders",
+    "title": "Coaching for HR Leaders & Culture",
+    "subtitle": "CHRO Strategic Partnering, Coaching Culture & Succession Architecture",
+    "badge": "HR Strategy & Culture",
+    "icon": "users",
+    "description": "Partnering with HR leadership to position HR as a core strategic driver to the CEO and Board, while cultivating an internal Coaching Culture that builds leadership capability from within.",
+    "deliverables": [
+      "CHRO & HR Leader Coaching: Developing the HR leader as a strategic business partner and trusted sounding board to the CEO",
+      "Coaching Culture Program: Building coaching skills in HR teams and internal managers (Manager-as-Coach and group coaching formats)",
+      "Talent & Succession Partnership: Co-designing structured coaching and assessment frameworks for high-potentials and succession pipelines",
+      "Internal Capability Institutionalization: Equipping organizations to develop and sustain their own leadership talent internally"
+    ],
+    "duration": "3 - 12 Months Partnership",
+    "targetAudience": "CHROs, HR Directors, People & Culture Executives, Internal Talent Leaders",
+    "deliverableFormat": "1:1 Executive Sounding Board, Manager-as-Coach Workshops & Co-Design"
+  },
+  {
+    "id": "corporate-training",
+    "title": "Corporate Training Programs",
+    "subtitle": "Practical Programs for Managers, Managers of Managers & Organization Leaders",
+    "badge": "Corporate Training",
+    "icon": "book-open",
+    "description": "Practical, actionable corporate training drawn from more than two decades of corporate leadership across telecom, technology, and commercial P&L management. Delivered in English, Bangla, or bilingual blend.",
+    "deliverables": [
+      "For Managers: Leading people, communication & feedback, negotiation, problem solving, Project Management Essentials, PMP exam prep, time management, sales & account management, performance management",
+      "For Managers of Managers: Leading leaders, coaching skills, strategy to execution, cross-functional stakeholder management, advanced negotiation, PgMP & PfMP program/portfolio management, leading change",
+      "For Organization Leaders: Leading through complexity, leadership team alignment, stakeholder trust & corporate affairs, ethical leadership, AI-era leadership, coaching culture, succession design",
+      "Training Internal Champions: Training-of-trainers (TOT) and internal champions to scale learning across the enterprise"
+    ],
+    "duration": "Half-day, Full-day, 3-Hour intensive, or Multi-Session Cohort",
+    "targetAudience": "Managers, Cross-Functional Managers, Department Heads & Senior Executives",
+    "deliverableFormat": "In-Person (Dhaka/Chattogram), Live Virtual, Hybrid, or In-House Custom"
+  },
+  {
+    "id": "consulting-advisory",
+    "title": "Consulting & Strategic Advisory",
+    "subtitle": "Leadership Team Building, Capability Roadmaps & Regulatory Strategy",
+    "badge": "Strategic Consulting",
+    "icon": "briefcase",
+    "description": "Strategic advisory offered to CXOs and Boards, focusing on leadership team performance, organizational capability roadmaps, public policy, and regulatory strategy in telecom and tech.",
+    "deliverables": [
+      "Leadership Team Building: Role clarity, executive alignment around a shared agenda, and high-performance operating rhythms",
+      "Leadership Capability Roadmap: Organization-wide diagnostic and customized coaching/training roadmap",
+      "Stakeholder Relations & Corporate Affairs: Government, regulator, trade chamber, and public reputation engagement strategy",
+      "Regulatory Strategy: Telecom, technology, spectrum access, Significant Market Power (SMP), infrastructure sharing, DFS licensing",
+      "Purpose & Strategy Alignment: Connecting organizational purpose, stakeholder trust, and disciplined execution"
+    ],
+    "duration": "3 - 12 Months Advisory Retainer / Project-Based",
+    "targetAudience": "CEOs, Managing Directors, Corporate Affairs Directors, Board Sponsors",
+    "deliverableFormat": "Executive Boardrooms, Strategic Roadmaps, Diagnostic Audits & Advisory"
+  },
+  {
+    "id": "working-with-boards",
+    "title": "Working with Boards",
+    "subtitle": "Board Governance Settle-in & Enterprise Leadership Sponsorship",
+    "badge": "Board Governance",
+    "icon": "shield",
+    "description": "MMR Rise works with board members as sponsors and champions of organization-wide leadership development. Supporting board members to settle into their role and contribute with strategic clarity.",
+    "deliverables": [
+      "Board Member Role Settle-in: Helping newly appointed or transitioning board members settle into governance and contribute effectively",
+      "Enterprise Development Sponsorship: Designing comprehensive coaching, training, and leadership programs sponsored directly by the Board",
+      "Leadership Alignment & Succession: Acting as an independent sounding board on executive succession and leadership pipeline readiness",
+      "External Standing & Governance: Strategic advisory on corporate affairs, ethics, and external stakeholder trust"
+    ],
+    "duration": "Annual Board Advisory Retainer or Committee Sponsorship",
+    "targetAudience": "Board Members, Board Chairs, Nominations & Governance Committees",
+    "deliverableFormat": "Closed-Door Board Sessions, Committee Consultations & Executive Briefings"
   }
 ]
-

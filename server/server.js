@@ -124,30 +124,30 @@ app.get('/api/bookings/available-slots', (req, res) => {
   const packages = [
     {
       id: 'pkg-discovery',
-      name: 'Strategy Discovery Call',
-      duration: '30 Minutes',
+      name: 'Discovery Conversation',
+      duration: '45 - 60 Minutes',
       price: 5000,
       currency: 'BDT',
-      badge: 'Introductory',
-      description: 'Focused 1-on-1 assessment to diagnose your key organizational or leadership friction points and outline next strategic moves.'
+      badge: 'Step 01: Discovery',
+      description: 'Initial confidential conversation to understand the leader, team dynamics, and business context, then agree on scope, outcomes, and measures of success.'
     },
     {
       id: 'pkg-executive',
-      name: 'Executive Leadership Strategy Deep-Dive',
-      duration: '90 Minutes',
+      name: '1-on-1 Executive Coaching Session',
+      duration: '60 - 90 Minutes',
       price: 15000,
       currency: 'BDT',
-      badge: 'Most Popular',
-      description: 'Comprehensive 1-on-1 advisory with Mukhlasur Rahaman on executive presence, C-suite navigation, or acute project crisis.'
+      badge: 'ICF Executive Coaching',
+      description: 'Confidential 1:1 structured engagement with Mukhlesur Rahman on leadership presence, decision-making, stakeholder influence, and leading the leadership team.'
     },
     {
       id: 'pkg-corporate-audit',
-      name: 'Corporate Transformation & PMO Readiness Audit',
+      name: 'Leadership Capability & Team Alignment Diagnostic',
       duration: 'Half-Day (3 Hours)',
       price: 45000,
       currency: 'BDT',
       badge: 'Enterprise Advisory',
-      description: 'Executive-level operational architecture review for your enterprise leadership team or project management office.'
+      description: 'Organizational diagnostic assessing leadership team building, capability roadmaps, regulatory strategy, or in-house cohort design.'
     }
   ];
 
@@ -275,7 +275,7 @@ app.post('/api/contact', (req, res) => {
   writeJson('contacts.json', contacts);
 
   res.status(201).json({
-    message: 'Thank you for reaching out to MMR Rise. Mukhlasur Rahaman’s executive office has received your message and will get back to you shortly.',
+    message: 'Thank you for reaching out to MMR Rise. Mukhlesur Rahman’s executive office has received your message and will get back to you shortly.',
     contact: newContact
   });
 });

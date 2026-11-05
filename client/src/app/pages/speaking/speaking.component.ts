@@ -68,7 +68,7 @@ import { ApiService, SpeakingTopic } from '../../services/api.service';
         <div id="speaker-form" class="max-w-3xl mx-auto bg-white dark:bg-slate-900 rounded-3xl p-8 sm:p-12 border border-slate-200 dark:border-slate-800 shadow-xl">
           <div class="text-center mb-8 space-y-2">
             <span class="text-xs font-bold uppercase tracking-wider text-brand-accent bg-amber-500/10 dark:bg-slate-800 px-3 py-1 rounded-full border border-brand-accent/30">Speaker Inquiry</span>
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-white font-cinzel">Invite Mukhlasur Rahaman to Speak</h3>
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white font-cinzel">Invite Mukhlesur Rahman to Speak</h3>
             <p class="text-xs text-slate-500 dark:text-slate-400">Provide your event specifics and our speaker bureau will confirm availability within 24 business hours.</p>
           </div>
 

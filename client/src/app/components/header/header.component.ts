@@ -12,7 +12,7 @@ import { ThemeService } from '../../services/theme.service';
       <!-- Top announcement bar -->
       <div class="bg-gradient-to-r from-slate-100 via-white to-slate-100 dark:from-brand-navy dark:via-slate-900 dark:to-brand-navy border-b border-slate-200 dark:border-brand-accent/20 py-1.5 px-4 text-center text-xs font-medium text-slate-700 dark:text-slate-300">
         <span class="inline-block px-2 py-0.5 mr-2 rounded bg-brand-accent/20 text-brand-dark dark:text-brand-accent uppercase text-[10px] tracking-wider font-bold">MMR Rise Advisory</span>
-        Direct consultations with Mukhlasur Rahaman now booking for Q4 2026 & Q1 2027.
+        Direct consultations with Mukhlesur Rahman now booking for Q4 2026 & Q1 2027.
         <a routerLink="/booking" class="ml-2 text-brand-accent hover:underline font-bold">Reserve Your Session &rarr;</a>
       </div>
 
@@ -28,7 +28,7 @@ import { ThemeService } from '../../services/theme.service';
               <div class="font-cinzel text-2xl font-bold tracking-wider text-slate-900 dark:text-white flex items-center">
                 MMR <span class="text-brand-accent ml-1 font-sans font-light">RISE</span>
               </div>
-              <div class="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-widest font-medium">Mukhlasur Rahaman</div>
+              <div class="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-widest font-medium">Mukhlesur Rahman</div>
             </div>
           </a>
 
@@ -51,11 +51,11 @@ import { ThemeService } from '../../services/theme.service';
                 <a routerLink="/about-rise" routerLinkActive="text-brand-accent bg-slate-100 dark:bg-slate-800/60"
                    class="block px-4 py-2.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-brand-navy hover:text-brand-accent transition">
                   <div class="font-semibold text-brand-accent">About MMR Rise</div>
-                  <div class="text-xs text-slate-500 dark:text-slate-400">Firm Vision, Mission & Impact</div>
+                  <div class="text-xs text-slate-500 dark:text-slate-400">Firm Vision, Mission & Service Catalog</div>
                 </a>
                 <a routerLink="/about-mmr" routerLinkActive="text-brand-accent bg-slate-100 dark:bg-slate-800/60"
                    class="block px-4 py-2.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-brand-navy hover:text-brand-accent transition">
-                  <div class="font-semibold text-slate-900 dark:text-white">Mukhlasur Rahaman</div>
+                  <div class="font-semibold text-slate-900 dark:text-white">Mukhlesur Rahman</div>
                   <div class="text-xs text-slate-500 dark:text-slate-400">Biography & Leadership Profile</div>
                 </a>
               </div>
@@ -81,9 +81,14 @@ import { ThemeService } from '../../services/theme.service';
               Media
             </a>
 
+            <a routerLink="/faq" routerLinkActive="text-brand-accent bg-slate-100 dark:bg-slate-800/60 font-semibold"
+               class="px-3 py-2 rounded-md text-slate-700 dark:text-slate-300 hover:text-brand-blue dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/40 transition">
+              FAQ
+            </a>
+
             <a routerLink="/contact" routerLinkActive="text-brand-accent bg-slate-100 dark:bg-slate-800/60 font-semibold"
                class="px-3 py-2 rounded-md text-slate-700 dark:text-slate-300 hover:text-brand-blue dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/40 transition">
-              Contact & FAQ
+              Contact
             </a>
           </nav>
 
@@ -157,12 +162,13 @@ import { ThemeService } from '../../services/theme.service';
 
         <a (click)="isMobileMenuOpen = false" routerLink="/" class="block px-3 py-2 rounded-md text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Home</a>
         <a (click)="isMobileMenuOpen = false" routerLink="/about-rise" class="block px-3 py-2 rounded-md text-brand-accent font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">About MMR Rise</a>
-        <a (click)="isMobileMenuOpen = false" routerLink="/about-mmr" class="block px-3 py-2 rounded-md text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">About Mukhlasur Rahaman</a>
-        <a (click)="isMobileMenuOpen = false" routerLink="/services" class="block px-3 py-2 rounded-md text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Consulting Services</a>
-        <a (click)="isMobileMenuOpen = false" routerLink="/courses" class="block px-3 py-2 rounded-md text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Course Sales (Online & Offline)</a>
+        <a (click)="isMobileMenuOpen = false" routerLink="/about-mmr" class="block px-3 py-2 rounded-md text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">About Mukhlesur Rahman</a>
+        <a (click)="isMobileMenuOpen = false" routerLink="/services" class="block px-3 py-2 rounded-md text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Service Catalog</a>
+        <a (click)="isMobileMenuOpen = false" routerLink="/courses" class="block px-3 py-2 rounded-md text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Courses & Workshops</a>
         <a (click)="isMobileMenuOpen = false" routerLink="/speaking" class="block px-3 py-2 rounded-md text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Speaking & Keynotes</a>
         <a (click)="isMobileMenuOpen = false" routerLink="/media" class="block px-3 py-2 rounded-md text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Media & Press</a>
-        <a (click)="isMobileMenuOpen = false" routerLink="/contact" class="block px-3 py-2 rounded-md text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Contact & FAQs</a>
+        <a (click)="isMobileMenuOpen = false" routerLink="/faq" class="block px-3 py-2 rounded-md text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Frequently Asked Questions (FAQ)</a>
+        <a (click)="isMobileMenuOpen = false" routerLink="/contact" class="block px-3 py-2 rounded-md text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Contact Office</a>
         <div class="pt-3">
           <a (click)="isMobileMenuOpen = false" routerLink="/booking"
              class="w-full text-center block px-4 py-3 rounded-xl bg-gradient-to-r from-brand-accent to-brand-accentLight text-brand-dark font-bold text-sm uppercase tracking-wider shadow">
