@@ -3,6 +3,15 @@ import cors from 'cors';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import {
+  getSlotsForDate,
+  generateGoogleCalendarUrl,
+  generateIcsContent,
+  isFriday,
+  getWeekdayName,
+  TIME_SLOTS_20MIN
+} from './bookingService.js';
+import { sendBookingEmails } from './emailService.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -109,27 +118,47 @@ app.post('/api/courses/enroll', (req, res) => {
   });
 });
 
-// 5. Booking Slots & Paid Consultation Booking
+// 5. Booking Slots & 20-Minute Executive Advisory Scheduling
+// GET slots for a specific date (Saturday - Thursday, 9 AM - 9 PM BST)
+app.get('/api/bookings/slots', (req, res) => {
+  let dateStr = req.query.date;
+  if (!dateStr) {
+    // Default to today or next Saturday if today is Friday
+    const now = new Date();
+    // Offset for Bangladesh Standard Time (UTC+6)
+    const bstTime = new Date(now.getTime() + (6 * 60 + now.getTimezoneOffset()) * 60000);
+    dateStr = bstTime.toISOString().split('T')[0];
+  }
+
+  const bookings = readJson('bookings.json') || [];
+  const result = getSlotsForDate(dateStr, bookings);
+  res.json(result);
+});
+
+// Legacy / Convenience endpoint with package list
 app.get('/api/bookings/available-slots', (req, res) => {
-  const slots = [
-    { id: 'slot-1', date: '2026-11-15', time: '10:00 AM - 11:30 AM', available: true },
-    { id: 'slot-2', date: '2026-11-15', time: '03:00 PM - 04:30 PM', available: true },
-    { id: 'slot-3', date: '2026-11-16', time: '11:00 AM - 12:30 PM', available: true },
-    { id: 'slot-4', date: '2026-11-18', time: '02:00 PM - 03:30 PM', available: true },
-    { id: 'slot-5', date: '2026-11-20', time: '10:00 AM - 11:30 AM', available: false }, // booked
-    { id: 'slot-6', date: '2026-11-22', time: '04:00 PM - 05:30 PM', available: true },
-    { id: 'slot-7', date: '2026-11-25', time: '11:00 AM - 12:30 PM', available: true }
-  ];
+  const dateStr = req.query.date || new Date().toISOString().split('T')[0];
+  const bookings = readJson('bookings.json') || [];
+  const slotData = getSlotsForDate(dateStr, bookings);
 
   const packages = [
+    {
+      id: 'pkg-20min-advisory',
+      name: '20-Minute Strategic Consultation',
+      duration: '20 Minutes',
+      price: 5000,
+      currency: 'BDT',
+      badge: '20-Min Slot',
+      description: 'Focused, high-impact 1-on-1 strategic session with Mukhlesur Rahman on leadership decisions, PMO bottlenecks, or corporate challenges.'
+    },
     {
       id: 'pkg-discovery',
       name: 'Discovery Conversation',
       duration: '45 - 60 Minutes',
-      price: 5000,
+      price: 8000,
       currency: 'BDT',
       badge: 'Step 01: Discovery',
-      description: 'Initial confidential conversation to understand the leader, team dynamics, and business context, then agree on scope, outcomes, and measures of success.'
+      description: 'Comprehensive initial conversation to understand the leader, team dynamics, and business context, then agree on scope, outcomes, and measures of success.'
     },
     {
       id: 'pkg-executive',
@@ -139,55 +168,185 @@ app.get('/api/bookings/available-slots', (req, res) => {
       currency: 'BDT',
       badge: 'ICF Executive Coaching',
       description: 'Confidential 1:1 structured engagement with Mukhlesur Rahman on leadership presence, decision-making, stakeholder influence, and leading the leadership team.'
-    },
-    {
-      id: 'pkg-corporate-audit',
-      name: 'Leadership Capability & Team Alignment Diagnostic',
-      duration: 'Half-Day (3 Hours)',
-      price: 45000,
-      currency: 'BDT',
-      badge: 'Enterprise Advisory',
-      description: 'Organizational diagnostic assessing leadership team building, capability roadmaps, regulatory strategy, or in-house cohort design.'
     }
   ];
 
-  res.json({ slots, packages });
+  res.json({
+    date: slotData.date,
+    weekday: slotData.weekday,
+    isFriday: slotData.isFriday,
+    slots: slotData.slots,
+    packages
+  });
 });
 
-app.post('/api/bookings', (req, res) => {
-  const { packageId, packageName, clientName, clientEmail, clientPhone, organization, date, timeSlot, mode, paymentMethod, notes, fee } = req.body;
-  if (!clientName || !clientEmail || !clientPhone || !date || !timeSlot) {
-    return res.status(400).json({ error: 'Missing mandatory booking fields' });
-  }
-
-  const bookings = readJson('bookings.json') || [];
-  const newBooking = {
-    id: `BK-${Date.now()}`,
-    packageId: packageId || 'custom',
-    packageName: packageName || 'Executive Consultation',
+app.post('/api/bookings', async (req, res) => {
+  const {
+    packageId,
+    packageName,
     clientName,
     clientEmail,
     clientPhone,
-    organization: organization || 'Individual / Confidential',
+    organization,
     date,
     timeSlot,
+    mode,
+    paymentMethod,
+    notes,
+    topicOfInterest,
+    fee
+  } = req.body;
+
+  if (!clientName || !clientEmail || !clientPhone || !date || !timeSlot) {
+    return res.status(400).json({ error: 'Missing mandatory booking fields (clientName, clientEmail, clientPhone, date, timeSlot)' });
+  }
+
+  // 1. Strict Day Rule: Saturday to Thursday only. Friday is NOT available.
+  if (isFriday(date)) {
+    return res.status(400).json({
+      error: 'Fridays are non-working days. MMR Rise advisory operates Saturday through Thursday from 9:00 AM to 9:00 PM.'
+    });
+  }
+
+  const bookings = readJson('bookings.json') || [];
+
+  // 2. Prevent Double Booking
+  const conflict = bookings.find(b => b.date === date && b.timeSlot === timeSlot && b.status !== 'Cancelled');
+  if (conflict) {
+    return res.status(409).json({
+      error: `The ${timeSlot} slot on ${date} (${getWeekdayName(date)}) has already been booked. Please select another slot.`
+    });
+  }
+
+  const newBooking = {
+    id: `BK-${Date.now()}`,
+    packageId: packageId || 'pkg-20min-advisory',
+    packageName: packageName || '20-Minute Strategic Consultation',
+    clientName: clientName.trim(),
+    clientEmail: clientEmail.trim(),
+    clientPhone: clientPhone.trim(),
+    organization: organization ? organization.trim() : 'Individual / Confidential',
+    date,
+    weekday: getWeekdayName(date),
+    timeSlot,
+    duration: '20 Minutes',
     mode: mode || 'Virtual (Google Meet / Zoom)',
-    fee: fee || 15000,
+    fee: fee || 5000,
     currency: 'BDT',
-    paymentMethod: paymentMethod || 'bKash / Card / Direct Bank Transfer',
-    paymentStatus: 'Verification Pending / Paid Demo',
-    status: 'Confirmed',
-    notes: notes || '',
+    paymentMethod: paymentMethod || 'bKash Merchant Pay',
+    paymentStatus: 'Pending Verification',
+    status: 'Confirmed', // Confirmed slot, ready for calendar
+    notes: notes || topicOfInterest || '',
     createdAt: new Date().toISOString()
   };
+
+  // 3. Generate instant Google Calendar link & iCal download link
+  newBooking.googleCalendarUrl = generateGoogleCalendarUrl(newBooking);
+  newBooking.calendarIcsUrl = `/api/bookings/${newBooking.id}/calendar.ics`;
 
   bookings.unshift(newBooking);
   writeJson('bookings.json', bookings);
 
+  // 4. Trigger Email Notification to Site Owner (with Google Calendar & Confirm button) and Client
+  const baseUrl = `${req.protocol}://${req.get('host')}`;
+  sendBookingEmails(newBooking, baseUrl).catch(err => {
+    console.error('[Email Notification Error]:', err.message);
+  });
+
   res.status(201).json({
-    message: 'Your booking has been scheduled successfully! A calendar invitation and confirmation receipt have been generated.',
+    message: 'Your 20-minute consultation has been scheduled successfully! An email notification has been dispatched with Google Calendar integration.',
     booking: newBooking
   });
+});
+
+// Download .ics iCalendar invite file
+app.get('/api/bookings/:id/calendar.ics', (req, res) => {
+  const bookings = readJson('bookings.json') || [];
+  const booking = bookings.find(b => b.id === req.params.id);
+  if (!booking) return res.status(404).send('Booking not found');
+
+  const ics = generateIcsContent(booking);
+  res.setHeader('Content-Type', 'text/calendar; charset=utf-8');
+  res.setHeader('Content-Disposition', `attachment; filename="MMR-Rise-${booking.id}.ics"`);
+  res.send(ics);
+});
+
+// Direct redirect to Google Calendar
+app.get('/api/bookings/:id/gcal', (req, res) => {
+  const bookings = readJson('bookings.json') || [];
+  const booking = bookings.find(b => b.id === req.params.id);
+  if (!booking) return res.status(404).send('Booking not found');
+
+  const gcalUrl = generateGoogleCalendarUrl(booking);
+  res.redirect(gcalUrl);
+});
+
+// Site Owner 1-Click Confirmation Landing Page
+app.get('/api/bookings/confirm/:id', (req, res) => {
+  const bookings = readJson('bookings.json') || [];
+  const booking = bookings.find(b => b.id === req.params.id);
+  if (!booking) return res.status(404).send('Booking not found');
+
+  booking.status = 'Confirmed';
+  booking.hostConfirmedAt = new Date().toISOString();
+  writeJson('bookings.json', bookings);
+
+  const gcalUrl = generateGoogleCalendarUrl(booking);
+
+  res.send(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>Booking Confirmed | MMR Rise Executive Advisory</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #060e1c; color: #ffffff; margin: 0; padding: 32px 16px; display: flex; align-items: center; justify-content: center; min-height: 90vh; }
+        .card { max-width: 580px; width: 100%; background: #0a1931; border: 1px solid #1f74b9; border-radius: 24px; padding: 36px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); text-align: center; }
+        .badge { display: inline-block; background: rgba(244, 149, 29, 0.2); color: #f4951d; border: 1px solid rgba(244, 149, 29, 0.4); padding: 4px 12px; border-radius: 999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        h1 { margin: 16px 0 8px; font-size: 24px; color: #ffffff; }
+        p.subtitle { color: #94a3b8; font-size: 14px; margin-bottom: 24px; }
+        .box { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 20px; text-align: left; font-size: 13px; line-height: 1.8; margin-bottom: 24px; }
+        .box strong { color: #f4951d; }
+        .actions { display: flex; flex-direction: column; gap: 12px; }
+        .btn-gcal { background: #1a73e8; color: #ffffff; text-decoration: none; padding: 14px 24px; border-radius: 12px; font-weight: 700; font-size: 14px; display: block; box-shadow: 0 4px 12px rgba(26,115,232,0.4); }
+        .btn-ics { background: rgba(255,255,255,0.08); color: #e2e8f0; text-decoration: none; padding: 12px 24px; border-radius: 12px; font-size: 13px; display: block; border: 1px solid rgba(255,255,255,0.15); }
+      </style>
+    </head>
+    <body>
+      <div class="card">
+        <span class="badge">Session Confirmed & Approved</span>
+        <h1>Executive Consultation Confirmed</h1>
+        <p class="subtitle">The 20-minute session has been confirmed in the MMR Rise system.</p>
+        
+        <div class="box">
+          <div>Client: <strong>${booking.clientName}</strong></div>
+          <div>Date: <strong>${booking.date} (${booking.weekday || 'Sat-Thu'})</strong></div>
+          <div>Time: <strong>${booking.timeSlot}</strong> (20 Minutes)</div>
+          <div>Email: <strong>${booking.clientEmail}</strong> &bull; Phone: <strong>${booking.clientPhone}</strong></div>
+          <div>Mode: <strong>${booking.mode}</strong></div>
+          <div>Agenda: <em>${booking.notes || 'General Executive Advisory'}</em></div>
+          <div>Booking ID: <code>${booking.id}</code></div>
+        </div>
+
+        <div class="actions">
+          <a href="${gcalUrl}" target="_blank" class="btn-gcal">
+            📅 Add to Your Google Calendar
+          </a>
+          <a href="/api/bookings/${booking.id}/calendar.ics" class="btn-ics">
+            📥 Download .ICS Calendar Invite
+          </a>
+        </div>
+      </div>
+    </body>
+    </html>
+  `);
+});
+
+// View recorded email logs
+app.get('/api/bookings/emails', (req, res) => {
+  const emailLogs = readJson('email-logs.json') || [];
+  res.json(emailLogs);
 });
 
 app.get('/api/bookings', (req, res) => {

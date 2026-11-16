@@ -57,9 +57,13 @@ export interface BookingPackage {
 
 export interface BookingSlot {
   id: string;
-  date: string;
   time: string;
+  start?: string;
+  end?: string;
+  period?: 'morning' | 'afternoon' | 'evening' | string;
   available: boolean;
+  duration?: string;
+  date?: string;
 }
 
 export interface SpeakingTopic {
@@ -133,6 +137,32 @@ export class ApiService {
   getBookingSlots(): Observable<{ slots: BookingSlot[], packages: BookingPackage[] }> {
     return this.http.get<{ slots: BookingSlot[], packages: BookingPackage[] }>(`${this.apiUrl}/bookings/available-slots`).pipe(
       catchError(() => of({ slots: FALLBACK_SLOTS, packages: FALLBACK_PACKAGES }))
+    );
+  }
+
+  getSlotsForDate(date: string): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/bookings/slots?date=${date}`).pipe(
+      catchError(() => {
+        const [y, m, d] = date.split('-').map(Number);
+        const dayOfWeek = new Date(Date.UTC(y, m - 1, d)).getUTCDay();
+        if (dayOfWeek === 5) {
+          return of({
+            date,
+            weekday: 'Friday',
+            isFriday: true,
+            available: false,
+            message: 'Fridays are non-working days. MMR Rise advisory operates Saturday through Thursday.',
+            slots: []
+          });
+        }
+        return of({
+          date,
+          weekday: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][dayOfWeek],
+          isFriday: false,
+          available: true,
+          slots: FALLBACK_SLOTS.map(s => ({ ...s, id: `${date}_${s.id}`, duration: '20 Minutes' }))
+        });
+      })
     );
   }
 

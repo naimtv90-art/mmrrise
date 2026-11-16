@@ -1,7 +1,7 @@
 {
   "name": "mmr-rise-backend",
   "version": "1.0.0",
-  "description": "Backend API for MMR Rise - Mukhlasur Rahaman Executive Coaching & Consultancy",
+  "description": "Backend API for MMR Rise - Mukhlesur Rahman Executive Coaching & Consultancy",
   "main": "server.js",
   "type": "module",
   "scripts": {
@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "nodemailer": "^6.9.16"
   }
 }
 
