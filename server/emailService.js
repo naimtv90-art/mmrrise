@@ -9,7 +9,19 @@ const __dirname = path.dirname(__filename);
 const DATA_DIR = path.join(__dirname, 'data');
 const EMAIL_LOGS_FILE = path.join(DATA_DIR, 'email-logs.json');
 
-const SITE_OWNER_EMAIL = process.env.SITE_OWNER_EMAIL || 'mmrshohagbd@gmail.com';
+// Auto-load .env configuration
+try {
+  const rootEnv = path.resolve(__dirname, '..', '.env');
+  if (fs.existsSync(rootEnv)) {
+    process.loadEnvFile(rootEnv);
+  } else if (fs.existsSync(path.resolve(__dirname, '.env'))) {
+    process.loadEnvFile(path.resolve(__dirname, '.env'));
+  }
+} catch (e) {
+  // Ignore if no .env
+}
+
+const getSiteOwnerEmail = () => process.env.SITE_OWNER_EMAIL || 'mmr@mmrrise.com';
 const OWNER_NAME = 'Mukhlesur Rahman, PMP, PgMP, PfMP, PCC, DTM';
 
 /**
@@ -18,10 +30,11 @@ const OWNER_NAME = 'Mukhlesur Rahman, PMP, PgMP, PfMP, PCC, DTM';
  */
 function createTransporter() {
   if (process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS) {
+    const isSecure = process.env.SMTP_SECURE === 'true' || Number(process.env.SMTP_PORT) === 465;
     return nodemailer.createTransport({
       host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT) || 587,
-      secure: process.env.SMTP_SECURE === 'true',
+      port: Number(process.env.SMTP_PORT) || 465,
+      secure: isSecure,
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS
@@ -243,11 +256,13 @@ export async function sendBookingEmails(booking, baseUrl = 'http://localhost:300
     simulated: false
   };
 
+  const ownerEmail = getSiteOwnerEmail();
+
   if (transporter) {
     try {
       await transporter.sendMail({
         from: `"MMR Rise Platform" <${process.env.SMTP_USER}>`,
-        to: SITE_OWNER_EMAIL,
+        to: ownerEmail,
         subject: ownerSubject,
         html: ownerHtml
       });
@@ -260,7 +275,7 @@ export async function sendBookingEmails(booking, baseUrl = 'http://localhost:300
         html: clientHtml
       });
       results.clientEmailSent = true;
-      console.log(`[Email Service] Sent live booking emails for ${booking.id} to ${SITE_OWNER_EMAIL} and ${booking.clientEmail}`);
+      console.log(`[Email Service] Sent live booking emails for ${booking.id} to ${ownerEmail} and ${booking.clientEmail}`);
     } catch (err) {
       console.error('[Email Service] Error sending live email:', err.message);
       results.simulated = true;
@@ -270,7 +285,7 @@ export async function sendBookingEmails(booking, baseUrl = 'http://localhost:300
     // Graceful simulation & logging when SMTP credentials are not yet configured in env
     results.simulated = true;
     console.log(`[Email Service] SMTP not configured. Simulated booking email for ${booking.id}:`);
-    console.log(` -> Owner Email: ${SITE_OWNER_EMAIL} (Subject: ${ownerSubject})`);
+    console.log(` -> Owner Email: ${ownerEmail} (Subject: ${ownerSubject})`);
     console.log(` -> Client Email: ${booking.clientEmail} (Subject: ${clientSubject})`);
     console.log(` -> Direct Google Calendar Link: ${gcalUrl}`);
     console.log(` -> 1-Click Owner Confirm Link: ${confirmUrl}`);
@@ -280,7 +295,7 @@ export async function sendBookingEmails(booking, baseUrl = 'http://localhost:300
   logEmail({
     bookingId: booking.id,
     timestamp: new Date().toISOString(),
-    ownerRecipient: SITE_OWNER_EMAIL,
+    ownerRecipient: ownerEmail,
     clientRecipient: booking.clientEmail,
     ownerSubject,
     clientSubject,
@@ -291,4 +306,63 @@ export async function sendBookingEmails(booking, baseUrl = 'http://localhost:300
   });
 
   return results;
+}
+
+/**
+ * Sends notification email when a user submits the Contact / Executive Inquiry form.
+ */
+export async function sendContactNotification(contactData) {
+  const transporter = createTransporter();
+  const ownerEmail = getSiteOwnerEmail();
+  const subject = `📩 [New Inquiry] ${contactData.subject || 'Consultation Inquiry'}: ${contactData.name}`;
+
+  const html = `
+    <!DOCTYPE html>
+    <html>
+    <head><meta charset="utf-8"></head>
+    <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #f8fafc; margin: 0; padding: 24px; color: #1e293b;">
+      <div style="max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 16px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+        <div style="background: linear-gradient(135deg, #060e1c 0%, #0a1931 100%); padding: 28px 32px; border-bottom: 3px solid #f4951d;">
+          <h2 style="margin: 0; color: #ffffff; font-size: 20px;">MMR Rise Executive Office</h2>
+          <p style="margin: 6px 0 0; color: #f4951d; font-size: 13px; font-weight: 600;">NEW WEBSITE INQUIRY RECEIVED</p>
+        </div>
+        <div style="padding: 28px 32px;">
+          <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px;">
+            <tr><td style="padding: 8px 0; color: #64748b; width: 140px;">From:</td><td style="padding: 8px 0; font-weight: 600; color: #0a1931;">${contactData.name}</td></tr>
+            <tr><td style="padding: 8px 0; color: #64748b;">Email:</td><td style="padding: 8px 0;"><a href="mailto:${contactData.email}" style="color: #1f74b9; font-weight: 600;">${contactData.email}</a></td></tr>
+            <tr><td style="padding: 8px 0; color: #64748b;">Phone:</td><td style="padding: 8px 0; color: #0a1931;">${contactData.phone || 'Not provided'}</td></tr>
+            <tr><td style="padding: 8px 0; color: #64748b;">Service Interest:</td><td style="padding: 8px 0; font-weight: 600; color: #0a1931;">${contactData.serviceInterest || 'General'}</td></tr>
+          </table>
+          <div style="background: #f1f5f9; border-left: 4px solid #1f74b9; padding: 16px; border-radius: 8px; margin-bottom: 24px;">
+            <p style="margin: 0 0 6px; font-size: 12px; font-weight: 700; color: #64748b; text-transform: uppercase;">Message Content:</p>
+            <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #334155; white-space: pre-wrap;">${contactData.message}</p>
+          </div>
+          <div style="text-align: center;">
+            <a href="mailto:${contactData.email}?subject=Re: ${encodeURIComponent(contactData.subject || 'MMR Rise Consultation')}" style="display: inline-block; background: #0a1931; color: #ffffff; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 14px;">Reply Directly to ${contactData.name}</a>
+          </div>
+        </div>
+      </div>
+    </body>
+    </html>
+  `;
+
+  if (transporter) {
+    try {
+      await transporter.sendMail({
+        from: `"MMR Rise Inquiries" <${process.env.SMTP_USER}>`,
+        to: ownerEmail,
+        replyTo: contactData.email,
+        subject,
+        html
+      });
+      console.log(`[Email Service] Dispatched contact inquiry notification from ${contactData.name} to ${ownerEmail}`);
+      return { success: true };
+    } catch (err) {
+      console.error('[Email Service] Failed to send contact email:', err.message);
+      return { success: false, error: err.message };
+    }
+  } else {
+    console.log(`[Email Service] SMTP simulated contact notification for ${contactData.name} -> ${ownerEmail}`);
+    return { success: true, simulated: true };
+  }
 }

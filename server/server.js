@@ -11,11 +11,23 @@ import {
   getWeekdayName,
   TIME_SLOTS_20MIN
 } from './bookingService.js';
-import { sendBookingEmails } from './emailService.js';
+import { sendBookingEmails, sendContactNotification } from './emailService.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const DATA_DIR = path.join(__dirname, 'data');
+
+// Automatically load .env if available
+try {
+  const rootEnv = path.resolve(__dirname, '..', '.env');
+  if (fs.existsSync(rootEnv)) {
+    process.loadEnvFile(rootEnv);
+  } else if (fs.existsSync(path.resolve(__dirname, '.env'))) {
+    process.loadEnvFile(path.resolve(__dirname, '.env'));
+  }
+} catch (e) {
+  // Ignore if no .env
+}
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -432,6 +444,11 @@ app.post('/api/contact', (req, res) => {
 
   contacts.unshift(newContact);
   writeJson('contacts.json', contacts);
+
+  // Dispatch email notification to site owner asynchronously
+  sendContactNotification(newContact).catch(err => {
+    console.error('[Contact Email] Error sending inquiry notification:', err.message);
+  });
 
   res.status(201).json({
     message: 'Thank you for reaching out to MMR Rise. Mukhlesur Rahman’s executive office has received your message and will get back to you shortly.',
